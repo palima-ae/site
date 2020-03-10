@@ -1,4 +1,4 @@
-# palima_site
+# Site
 
 ## Project setup
 ```
