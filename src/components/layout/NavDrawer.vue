@@ -4,15 +4,12 @@
         <v-navigation-drawer
           app
           :value="drawerState"
-          :color="mainColor"
-          clipped
-          dark
           temporary
+          :dark="darkMode"
         >
           <v-list
-            dense
             nav
-            class="py-0"
+            class="py-1"
           >
             <v-list-item two-line class="px-0">
               <v-list-item-avatar>
@@ -73,7 +70,7 @@ export default {
     name: "NavDrawer",
 
     computed: {
-      ...mapGetters(['mainColor', 'drawerState']),
+      ...mapGetters(['mainColor', 'drawerState', "darkMode"]),
 
       // moveDrawer: {
       //   get () {
@@ -95,18 +92,7 @@ export default {
       return {
         
         // UI elements
-        miniVariant: true,
 
-        // Colors
-        // color: "blue",
-        colors: [
-          "primary",
-          "blue",
-          "success",
-          "red",
-          "teal",
-          "cyan"
-        ],
 
         // List items
         items : [

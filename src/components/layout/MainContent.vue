@@ -1,22 +1,20 @@
 <template>
-    
     <!-- CONTENT (v-model should be in v-select)-->
-    <v-content 
-        >
+    <v-content>
         <!-- Provides the application the proper gutter -->
 
       <v-container fluid>
 
-          <v-row justify="space-around">
-            <v-col cols="12">
+          <!-- <v-row justify="space-around">
+            <v-col cols="12"> -->
               <!-- 
                 If using vue-router 
                 router-view can take a key argument, we often need to set it to :
                 ':key = "$route.fullPath" to avoid bugs in single page applications
               -->
               <router-view></router-view>
-            </v-col>
-          </v-row>
+            <!-- </v-col>
+          </v-row> -->
 
       </v-container>
 

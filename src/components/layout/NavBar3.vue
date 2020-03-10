@@ -1,26 +1,47 @@
 <template>
+  <div>
+    <!-- SYSTEM BAR -->
+    <v-system-bar
+        app 
+        :id="sysbarID" 
+        :dark="darkMode"
+        :color="systemBgColor"
+        height="40"
+        fixed
+        >
+        <v-spacer></v-spacer>
+        <v-icon>mdi-wifi-strength-4</v-icon>
+        <v-icon>mdi-signal-cellular-outline</v-icon>
+        <v-icon>mdi-battery</v-icon>
+        <span>{{ currentTime }}</span>
+      </v-system-bar>
 
-
-    <v-app-bar
+    <v-app-bar 
+        :id="navbarID"
         app
-        clipped-right
-        elevate-on-scroll
-        scroll-target="#scrolling-techniques-7"
+        scroll-target="scrolling-techniques-4"
         :color="navBarColor"
         :dark="darkMode"
     >
 
 
         <v-img
-          alt="Vuetify Logo"
+          alt="Palima Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="@/assets/palima.png"
           transition="scale-transition"
           width="40"
         />
 
+        <v-spacer></v-spacer>
+        
+        <span>Data Driven Marketing
+        </span>
 
+
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
@@ -34,7 +55,7 @@
         >
             <template v-slot:activator="{ on }">
               <v-btn
-                  active-class="deep-purple--text text--accent-4"
+                  active-class="purple-text text--accent-4"
                   class = "hidden-xs-only"
                   text
                   v-on="on"
@@ -56,15 +77,17 @@
         >
             <template v-slot:activator="{ on }">
               <v-btn
+                  active-class="text--accent-4"
                   class = "hidden-xs-only"
                   text
                   v-on="on"
+                  link to="/expand"
               >
                 What We Do
             </v-btn>
             </template>
         
-            <v-list>
+            <!-- <v-list>
               <v-list-item-group
                 v-model="group"
                 active-class="deep-purple--text text--accent-4"
@@ -83,7 +106,7 @@
                   </v-list-item-content>
                 </v-list-item>
               </v-list-item-group>
-            </v-list>
+            </v-list> -->
 
         </v-menu>
   
@@ -92,13 +115,9 @@
 
 
   
-
-        <v-switch
-          v-model="setDarkMode"
-          label="Dark Mode"
-          :dark="darkMode"
-        ></v-switch>
-
+        <v-btn text @click.stop="updateDarkMode">
+          <v-icon :color="bulbIconColor"> {{ bulbIcon }} </v-icon>
+        </v-btn>
 
         <v-app-bar-nav-icon 
           class="hidden-sm-and-up"
@@ -109,7 +128,7 @@
 
 
       </v-app-bar>
-
+</div>
 </template>
 
 <script>
@@ -133,7 +152,8 @@ export default {
     // end DATA
     
     computed: {
-      ...mapGetters(['mainColor', 'drawerState', 'darkMode']),
+      ...mapGetters(['mainColor', 'drawerState', 'darkMode', "isMobile"]),
+
       setDarkMode: {
         get () {
           return this.$store.state.darkmode
@@ -142,17 +162,88 @@ export default {
           this.$store.commit('setDarkMode', value)
         }
       },
+
+      bulbIconColor () {return (this.darkMode ? "yellow" : "grey")},
+      bulbIcon () {return (this.darkMode ? "mdi-lightbulb-on" : "mdi-lightbulb")},
       navbarBgColor () {return (this.darkMode ? "black" : "white")},
-      navbarTextColor () {return (this.darkMode ? "light" : "dark")}
+      navbarTextColor () {return (this.darkMode ? "light" : "dark")},
+
+      currentTime () {
+        let currentDate = new Date()
+        let hours = currentDate.getHours()
+        let minutes = currentDate.getMinutes()
+        return (hours + ":" + minutes)
+      },
+      systemBgColor () {return (this.darkMode ? "rbg(0,0,0)" : "rgb(248, 248, 255)")},
+
+      dw_getWindowDims() {
+        var doc = document, w = window;
+        var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
+                doc.documentElement: doc.body;
+        
+        var width = docEl.clientWidth;
+        var height = docEl.clientHeight;
+        
+        // mobile zoomed in?
+        if ( w.innerWidth && width > w.innerWidth ) {
+            width = w.innerWidth;
+            height = w.innerHeight;
+        }
+        return {width: width, height: height};
+      },
+
+      navbarID () {
+        
+        var width = this.dw_getWindowDims.width;
+        var id_value = (width<960 ? "mobNavBar" : "deskNavBar")
+        return id_value
+      },
+      sysbarID () {
+        
+        var width = this.dw_getWindowDims.width;
+        var id_value = (width<960 ? "mobSysBar" : "deskSysBar")
+        return id_value
+      },
     },
     // end COMPUTED
 
 
     methods: {
-      ...mapActions(['updateDrawer']),
+      ...mapActions(['updateDrawer', 'updateDarkMode']),
     },
 
 }
 // end EXPORT
 
 </script>
+
+<style lang="scss" scoped>
+
+#mobNavBar {
+  border-radius: 5px;
+  margin: auto;
+  width: 100%
+}
+
+#deskNavBar {
+  border-radius: 80px;
+  margin: auto;
+  width:85%
+}
+
+#mobSysBar {
+  margin: auto;
+  text-align: center;
+  left: 0%;
+  right: 0%;
+  width: 100%;
+}
+
+#deskSysBar {
+  margin: auto;
+  text-align: center;
+  right: 0px;
+  width: 80%;
+}
+
+</style>

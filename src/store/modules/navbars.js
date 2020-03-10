@@ -1,13 +1,15 @@
 const state = {
     color: 'cyan',
     drawer: false,
-    darkmode: false
+    darkmode: false,
+    mobile: false
 };
 
 const getters = {
     mainColor: (state) => state.color,
     drawerState: (state) => state.drawer,
-    darkMode: (state) => state.darkmode
+    darkMode: (state) => state.darkmode,
+    isMobile: (state) => state.mobile,
 };
 
 const actions = {
@@ -19,6 +21,9 @@ const actions = {
     },
     updateDarkMode({commit, state}) {
         commit('setDarkMode', !state.darkmode)
+    },
+    updateMobile({commit, value}) {
+        commit('setMobile', value)
     }
 };
 
@@ -32,6 +37,9 @@ const mutations = {
     },
     setDarkMode (state, value) {
         state.darkmode = value
+    },
+    setMobile (state,value) {
+        state.mobile = value
     }
 
 };
