@@ -8,6 +8,7 @@ import Grid from '../views/Grid'
 import What from '../views/What'
 import SEO from '../views/SEO'
 import Expand from '../views/Expand'
+import Who from '../views/Who'
 
 
 Vue.use(VueRouter)
@@ -19,6 +20,7 @@ const routes = [
   {path: '/what', name: 'what', component: What},
   {path: '/seo', name: 'seo', component: SEO},
   {path: '/expand', name: 'expand', component: Expand},
+  {path: '/who', name: 'who', component: Who},
   { path: '/grid', name: 'grid', component: Grid },
   { path: '/cards', name: 'cardlist', component: CardList },
   { path: '/cards/:id', name: 'card', component: CardList,

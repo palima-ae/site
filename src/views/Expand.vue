@@ -4,7 +4,6 @@
     <v-tabs
       v-model="tabs"
       height=100
-      width="100vw"
       centered
       :background-color="appBgColor"
       :dark="darkMode"
@@ -202,33 +201,92 @@
   <v-card flat tile height="100%" :color="appBgColor">
     <v-container fluid>
     <v-row align-content="center">
+
       <v-col lg="4" xs="12"> 
         <v-card tile flat hover :height="cardHeight" color="purple lighten-2">
+          <v-card-title>Customer Demographic</v-card-title>
+          <v-card-text>
+            <p>You can’t create products or market them 
+                properly without understanding the demographics of your audience.
+            </p>
+            <p> Collecting and analyzing relevant data will allow you to
+              market a product that speaks to your target audience. The right customer data 
+              platform software can keep demographic data stored and organized correctly.
+            </p>
+          </v-card-text>
         </v-card>
+
       </v-col>
       <v-col lg="4" xs="12">
         <v-card tile flat hover :height="cardHeight" color="yellow lighten-2">
+          <v-card-title>ECommerce Transactions</v-card-title>
+          <v-card-text>
+            <p>Your ecommerce transaction data can work well with demographic data to recognize 
+                trends among your overall audience. When you start looking at more than one area 
+                of data, you can see how beneficial it is to have it all in one place on your 
+                customer data platform.
+            </p>
+          </v-card-text>
         </v-card>
       </v-col>
+
       <v-col lg="4" xs="12">
         <v-card tile flat hover :height="cardHeight" color="blue lighten-2">
+          <v-card-title>Email Metrics</v-card-title>
+          <v-card-text>
+            <p>Your ecommerce transaction data can work well with demographic data to recognize 
+                trends among your overall audience. When you start looking at more than one area 
+                of data, you can see how beneficial it is to have it all in one place on your 
+                customer data platform.
+            </p>
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>  
+
     <v-row align-content="center">
+
       <v-col lg="4" xs="12"> 
         <v-card tile flat hover :height="cardHeight" color="red lighten-2">
+          <v-card-title>Social Metrics</v-card-title>
+          <v-card-text>
+            <p>Your ecommerce transaction data can work well with demographic data to recognize 
+                trends among your overall audience. When you start looking at more than one area 
+                of data, you can see how beneficial it is to have it all in one place on your 
+                customer data platform.
+            </p>
+          </v-card-text>
         </v-card>
       </v-col>
+
       <v-col lg="4" xs="12">
         <v-card tile flat hover :height="cardHeight" color="green lighten-2">
+          <v-card-title>Website Metrics</v-card-title>
+          <v-card-text>
+            <p>Your ecommerce transaction data can work well with demographic data to recognize 
+                trends among your overall audience. When you start looking at more than one area 
+                of data, you can see how beneficial it is to have it all in one place on your 
+                customer data platform.
+            </p>
+          </v-card-text>
         </v-card>
       </v-col>
+
       <v-col lg="4" xs="12">
         <v-card tile flat hover :height="cardHeight" color="orange lighten-2">
+          <v-card-title>Ad Data</v-card-title>
+          <v-card-text>
+            <p>Your ecommerce transaction data can work well with demographic data to recognize 
+                trends among your overall audience. When you start looking at more than one area 
+                of data, you can see how beneficial it is to have it all in one place on your 
+                customer data platform.
+            </p>
+          </v-card-text>
         </v-card>
       </v-col>
-    </v-row> 
+
+    </v-row>
+
     </v-container> 
   </v-card>
   </v-tab-item>

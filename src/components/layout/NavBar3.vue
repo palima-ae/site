@@ -59,7 +59,7 @@
                   class = "hidden-xs-only"
                   text
                   v-on="on"
-                  link to='/about'
+                  link to='/who'
               >
                 Who We Are
             </v-btn>
@@ -143,7 +143,7 @@ export default {
             // List items
             items : [
             { title: 'Data Mining', icon: 'mdi-home', route: 'whatwedo' },
-            { title: 'Performance Advertisting', icon: 'mdi-account', route: '/about' },
+            { title: 'Performance Advertisting', icon: 'mdi-account', route: '/who' },
             { title: 'Web Technologies Consulting', icon: 'mdi-view-dashboard', route: '/dashboard' },
             { title: 'Contact', icon: 'mdi-file-table', route: '/tradeshistory' },
             ]
