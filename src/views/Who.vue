@@ -18,7 +18,7 @@
         <v-col lg="4">
           <v-card flat tile height=300 :dark="darkMode">
             <v-img src="@/assets/max.jpg" height=210></v-img>
-            <v-card-title>Max Mansour</v-card-title>
+            <v-card-title>Maxime</v-card-title>
             <v-card-subtitle>Founder</v-card-subtitle>
           </v-card>
         </v-col>
