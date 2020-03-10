@@ -39,6 +39,7 @@
 
     <!-- </v-parallax> -->
 
+    <Footer />
   </v-app>
 </template>
 
@@ -46,6 +47,7 @@
 import NavDrawer from './components/layout/NavDrawer.vue'
 import NavBar from './components/layout/NavBar3.vue'
 import MainContent from './components/layout/MainContent.vue'
+import Footer from '@/components/layout/Footer'
 
 import { mapGetters, mapActions} from 'vuex';
 
@@ -95,6 +97,7 @@ export default {
     NavDrawer,
     NavBar,
     MainContent,
+    Footer
   },
 
   // data () {

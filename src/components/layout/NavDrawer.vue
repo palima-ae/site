@@ -97,7 +97,7 @@ export default {
         // List items
         items : [
         { title: 'Home', icon: 'mdi-home', route: '/' },
-        { title: 'Who We Are', icon: 'mdi-account', route: '/account' },
+        { title: 'Who We Are', icon: 'mdi-account', route: '/who' },
         { title: 'What We Do', icon: 'mdi-view-dashboard', route: '/expand' },
         { title: 'Contact', icon: 'mdi-file-table', route: '/tradeshistory' },
         ]
