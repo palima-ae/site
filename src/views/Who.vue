@@ -55,7 +55,13 @@
         
         <v-col lg="8" align="start">
           <v-card flat tile :dark="darkMode" class="px-4">
-          <v-card-subtitle>Background</v-card-subtitle>
+          <v-card-subtitle>
+            <v-row align="center">
+            <span>Background</span>
+            <v-spacer></v-spacer>
+            <v-btn text>CV</v-btn>
+            </v-row>
+          </v-card-subtitle>
           <v-divider></v-divider>
           <v-card-text>
             <span>ESSEC Business School</span>
@@ -70,10 +76,10 @@
             <span>Passionate about Web Technologies</span>
           </v-card-text>
 
-          <v-card-actions> 
+          <!-- <v-card-actions> 
             <v-spacer></v-spacer>
             <v-btn text>CV</v-btn>
-          </v-card-actions>
+          </v-card-actions> -->
           </v-card>
         </v-col>
 

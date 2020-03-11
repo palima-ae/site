@@ -24,16 +24,16 @@
   
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
-  <v-row class="flex-sm-row">
+  <v-row class="d-flex flex-row">
 
-      <v-col lg="8" sm="12">
+      <v-col cols="12" lg="8" xs="12" sm="12" md="12">
         <v-row class="pb-5 px-5">
           <v-card shaped hover :dark="darkMode" width=100%>
             <v-card-title>
               <v-icon class="pl-2" large>mdi-chart-areaspline</v-icon>
               <span class="pl-8">Traffic Growth</span>
               <v-spacer></v-spacer>
-              <v-icon @click.stop="displaySEOelem1 = !displaySEOelem1">
+              <v-icon large @click.stop="displaySEOelem1 = !displaySEOelem1">
                 {{ displaySEOelem1===false ? downIcon : upIcon }}
               </v-icon>
             </v-card-title>
@@ -56,7 +56,7 @@
               <v-icon class="pl-2" large>mdi-google-maps</v-icon>
               <span class="pl-8">Local SEO</span>
               <v-spacer></v-spacer>
-              <v-icon @click.stop="displaySEOelem2 = !displaySEOelem2">
+              <v-icon large @click.stop="displaySEOelem2 = !displaySEOelem2">
                 {{ displaySEOelem2===false ? downIcon : upIcon }}
               </v-icon>
             </v-card-title>
@@ -74,10 +74,36 @@
         <v-row class="pb-5 px-5">
           <v-card shaped hover :dark="darkMode" width=100%>
             <v-card-title>
+              <v-icon class="pl-2" large>mdi-amazon</v-icon>
+              <span class="pl-8">Amazon SEO</span>
+              <v-spacer></v-spacer>
+              <v-icon large @click.stop="displaySEOelem4 = !displaySEOelem4">
+                {{ displaySEOelem4===false ? downIcon : upIcon }}
+              </v-icon>
+            </v-card-title>
+            <v-divider class="mx-4"></v-divider>
+            <v-card-text :style="showSEOelem4" class="px-8"> 
+              <p>We research high-volume, low-competition search queries on Amazon and incorporating them 
+                  into your product page to increase its ranking.
+              </p>
+              <p>We prioritize user experience, which is why we create content that emphasizes 
+                  readability and quality, as well as your brand voice. It’s natural and connects with 
+                  shoppers, encouraging them to choose your company and product.
+              </p>
+              <p>With pay-per-click (PPC) services on Amazon, we can also help your product gain immediate 
+                  exposure to complement your SEO strategy. Like traditional PPC ads, you only pay when a 
+                  shopper clicks on your listing.
+              </p>
+            </v-card-text>
+          </v-card>
+        </v-row>
+        <v-row class="pb-5 px-5">
+          <v-card shaped hover :dark="darkMode" width=100%>
+            <v-card-title>
               <v-icon class="pl-2" large>mdi-google-ads</v-icon>
               <span class="pl-8">Online Advertising</span>
               <v-spacer></v-spacer>
-              <v-icon @click.stop="displaySEOelem3 = !displaySEOelem3">
+              <v-icon large @click.stop="displaySEOelem3 = !displaySEOelem3">
                 {{ displaySEOelem3===false ? downIcon : upIcon }}
               </v-icon>
             </v-card-title>
@@ -92,9 +118,9 @@
         </v-row>
       </v-col>
 
-      <v-col lg="4" sm="12">
+      <v-col cols="12" lg="4" sm="12" md="12">
         <v-row class="pb-5 px-5">
-        <v-card raised hover :dark=darkMode>
+        <v-card raised hover :dark=darkMode width=100%>
           <v-card-title>
               <v-icon class="pl-2" large>mdi-book-open-page-variant</v-icon>
               <span class="pl-8">Services</span>
@@ -120,16 +146,16 @@
   
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
-  <v-row class="d-flex flex-sm-row">
+  <v-row class="flex-row">
 
-      <v-col lg="8" sm="12">
+      <v-col cols="12" lg="8" sm="12">
         <v-row class="pb-5 px-5">
           <v-card shaped hover :dark="darkMode" width=100%>
             <v-card-title>
               <v-icon class="pl-2" large>mdi-target-account</v-icon>
               <span class="pl-8">Tailored Campaigns</span>
               <v-spacer></v-spacer>
-              <v-icon @click.stop="displayEmailelem1 = !displayEmailelem1">
+              <v-icon large @click.stop="displayEmailelem1 = !displayEmailelem1">
                 {{ displayEmailelem1===false ? downIcon : upIcon }}
               </v-icon>
             </v-card-title>
@@ -152,7 +178,7 @@
               <v-icon class="pl-2" large>mdi-account-convert</v-icon>
               <span class="pl-8">Lead Nurturing</span>
               <v-spacer></v-spacer>
-              <v-icon @click.stop="displayEmailelem2 = !displayEmailelem2">
+              <v-icon large @click.stop="displayEmailelem2 = !displayEmailelem2">
                 {{ displayEmailelem2===false ? downIcon : upIcon }}
               </v-icon>
             </v-card-title>
@@ -182,10 +208,43 @@
         <v-row class="pb-5 px-5">
           <v-card shaped hover :dark="darkMode" width=100%>
             <v-card-title>
+              <v-icon class="pl-2" large>mdi-account-arrow-right</v-icon>
+              <span class="pl-8">Email Retargeting</span>
+              <v-spacer></v-spacer>
+              <v-icon large @click.stop="displayEmailelem4 = !displayEmailelem4">
+                {{ displayEmailelem4===false ? downIcon : upIcon }}
+              </v-icon>
+            </v-card-title>
+            <v-divider class="mx-4"></v-divider>
+            <v-card-text :style="showEmailelem4" class="px-8"> 
+              <p>A proper ecommerce retargeting strategy minimizes abandoned carts and maximizes the 
+                  chances that your customers will make a purchase on your site.
+              </p>
+              <p>Retargeting helps companies reach website visitors who don’t immediately convert. 
+                  In other words, retargeting can help your business connect with potential customers after 
+                  they leave your website and encourage them to return.
+              </p>
+              <p>It requires using cookies to track user activities on the Internet. You can place small 
+                pieces of code on your website, and every time a visitor enters your site, the code will 
+                release an anonymous browser cookie. If someone enters their email address on your site and 
+                leaves before making a purchase, you can trigger a personalized email with the products they 
+                viewed or placed in their cart.
+              </p>
+              <p>Retargeting helps you get the most out of your advertising budget, because 
+                it allows you to focus your attention on people who have demonstrated interested in your 
+                brand. You can use clear calls to action and promotional offers to encourage them to come 
+                back to your website and convert.
+              </p>
+            </v-card-text>
+          </v-card>
+        </v-row>
+        <v-row class="pb-5 px-5">
+          <v-card shaped hover :dark="darkMode" width=100%>
+            <v-card-title>
               <v-icon class="pl-2" large>mdi-monitor-dashboard</v-icon>
               <span class="pl-8">Monitoring</span>
               <v-spacer></v-spacer>
-              <v-icon @click.stop="displayEmailelem3 = !displayEmailelem3">
+              <v-icon large @click.stop="displayEmailelem3 = !displayEmailelem3">
                 {{ displayEmailelem3===false ? downIcon : upIcon }}
               </v-icon>
             </v-card-title>
@@ -205,7 +264,7 @@
         </v-row>
       </v-col>
 
-      <v-col lg="4" xs="12">
+      <v-col cols="auto" lg="4" xs="12">
         <v-row class="pb-5 px-5">
         <v-card raised hover :dark=darkMode>
           <v-card-title>
@@ -352,6 +411,7 @@ export default {
       displaySEOelem1: false,
       displaySEOelem2: false,
       displaySEOelem3: false, 
+      displaySEOelem4: false, 
 
       displayEmailelem1: false,
       displayEmailelem2: false,
@@ -424,6 +484,10 @@ export default {
       },
     showSEOelem3() {
       var displayValue = (this.displaySEOelem3===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showSEOelem4() {
+      var displayValue = (this.displaySEOelem4===false ? "none" : "")
       return ('display:' + displayValue)
       },
     showEmailelem1() {
