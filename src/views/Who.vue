@@ -68,7 +68,7 @@
                   <v-spacer></v-spacer>
                   <v-btn text 
                          class='font-weight-light'
-                         link to='/analytics-1'
+                         link to='/certificate/beginner-analytics'
                          >
                          View
                   </v-btn>
@@ -78,7 +78,12 @@
                 <v-row class='mx-5 font-weight-light'>
                   Advanced Analytics
                   <v-spacer></v-spacer>
-                  <v-btn text class='font-weight-light'>Download</v-btn>
+                  <v-btn text 
+                         class='font-weight-light'
+                         link to='/certificate/advanced-analytics'
+                         >
+                         View
+                  </v-btn>
                 </v-row>
             </v-expansion-panel-content>
           </v-expansion-panel>
@@ -90,21 +95,36 @@
                 <v-row class='mx-5 font-weight-light'>
                   Open Source Tools for Data Science
                   <v-spacer></v-spacer>
-                  <v-btn text class='font-weight-light'>Download</v-btn>
+                  <v-btn text 
+                         class='font-weight-light'
+                         link to="/certificate/open-source-tools-for-data-science"
+                         >
+                         View
+                  </v-btn>
                 </v-row>
               </v-expansion-panel-content>
             <v-expansion-panel-content>
                 <v-row class='mx-5 font-weight-light'>
                   Data Science Methodology
                   <v-spacer></v-spacer>
-                  <v-btn text class='font-weight-light'>Download</v-btn>
+                  <v-btn text 
+                         class='font-weight-light'
+                         link to="/certificate/data-science-methodology"
+                         >
+                         View
+                  </v-btn>
                 </v-row>
             </v-expansion-panel-content>
             <v-expansion-panel-content>
                 <v-row class='mx-5 font-weight-light'>
                   Python for Data Science and AI
                   <v-spacer></v-spacer>
-                  <v-btn text class='font-weight-light'>Download</v-btn>
+                  <v-btn text 
+                         class='font-weight-light'
+                         link to="/certificate/python-for-data-science"
+                         >
+                         View
+                  </v-btn>
                 </v-row>
             </v-expansion-panel-content>
           </v-expansion-panel>
@@ -116,42 +136,72 @@
                 <v-row class='mx-5 font-weight-light'>
                   SQL Fundamentals
                   <v-spacer></v-spacer>
-                  <v-btn text class='font-weight-light'>Download</v-btn>
+                  <v-btn text 
+                         class='font-weight-light'
+                         link to="/certificate/sql-fundamentals"
+                         >
+                         View
+                  </v-btn>
                 </v-row>
               </v-expansion-panel-content>
             <v-expansion-panel-content>
                 <v-row class='mx-5 font-weight-light'>
-                  Python Data Cleaning
+                  Data Cleaning and Analysis
                   <v-spacer></v-spacer>
-                  <v-btn text class='font-weight-light'>Download</v-btn>
+                  <v-btn text  
+                         class='font-weight-light'
+                         link to="/certificate/python-data-cleaning"
+                         >
+                         View
+                  </v-btn>
                 </v-row>
             </v-expansion-panel-content>
             <v-expansion-panel-content>
                 <v-row class='mx-5 font-weight-light'>
                   Python Data Cleaning - Advanced
                   <v-spacer></v-spacer>
-                  <v-btn text class='font-weight-light'>Download</v-btn>
+                  <v-btn text 
+                         class='font-weight-light'
+                         link to='/certificate/python-data-cleaning-advanced'
+                         >
+                         View
+                  </v-btn>
                 </v-row>
             </v-expansion-panel-content>
             <v-expansion-panel-content>
                 <v-row class='mx-5 font-weight-light'>
                   Exploratory Data Visualization
                   <v-spacer></v-spacer>
-                  <v-btn text class='font-weight-light'>Download</v-btn>
+                  <v-btn text 
+                         class='font-weight-light'
+                         link to="/certificate/exploratory-data-viz"
+                         >
+                         View
+                  </v-btn>
                 </v-row>
             </v-expansion-panel-content>
             <v-expansion-panel-content>
                 <v-row class='mx-5 font-weight-light'>
                   Storytelling Data Visualization
                   <v-spacer></v-spacer>
-                  <v-btn text class='font-weight-light'>Download</v-btn>
+                  <v-btn text 
+                         class='font-weight-light'
+                         link to="/certificate/storytelling-data-viz"
+                         >
+                         View
+                  </v-btn>
                 </v-row>
             </v-expansion-panel-content>
             <v-expansion-panel-content>
                 <v-row class='mx-5 font-weight-light'>
-                  Pandas Fundamentals
+                  Pandas and Numpy Fundamentals
                   <v-spacer></v-spacer>
-                  <v-btn text class='font-weight-light'>Download</v-btn>
+                  <v-btn text 
+                         class='font-weight-light'
+                         link to="/certificate/pandas-fundamentals"
+                         >
+                         View
+                  </v-btn>
                 </v-row>
             </v-expansion-panel-content>
           </v-expansion-panel>

@@ -10,6 +10,7 @@ import SEO from '../views/SEO'
 import Expand from '../views/Expand'
 import Who from '../views/Who'
 import Beginner from '@/views/Beginner'
+import Certificate from '@/views/Certificate'
 
 
 Vue.use(VueRouter)
@@ -23,6 +24,12 @@ const routes = [
   {path: '/expand', name: 'expand', component: Expand},
   {path: '/who', name: 'who', component: Who},
   {path: '/analytics-1', name: 'analytics-1', component: Beginner},
+  {path: '/certificate/:id', name: 'certificate', component: Certificate,
+      props: (route) => {
+        let id = route.params.id;
+        return { id };
+      }
+  },
   { path: '/grid', name: 'grid', component: Grid },
   { path: '/cards', name: 'cardlist', component: CardList },
   { path: '/cards/:id', name: 'card', component: CardList,
