@@ -25,10 +25,15 @@
   <v-tabs-items v-model="tabs">
 
 
+  <!-- ========================================  -->
+  <!-- TEAM TAB -->
+  <!-- ========================================  -->
+  
+  
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
 
-  <v-row>
+  <v-row class="d-flex flex-sm-row">
 
     <v-col lg="2">
     </v-col>
@@ -269,11 +274,18 @@
   
   </v-row>
   </v-card>
+  
+  
+  <!-- ========================================  -->
+  <!-- CONTACT TAB -->
+  <!-- ========================================  -->
   </v-tab-item>
   
   
   
   </v-tabs-items>
+
+
 
 </v-container>
 </template>

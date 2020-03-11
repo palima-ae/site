@@ -24,7 +24,7 @@
   
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
-  <v-row>
+  <v-row class="flex-sm-row">
 
       <v-col lg="8" sm="12">
         <v-row class="pb-5 px-5">
@@ -92,7 +92,7 @@
         </v-row>
       </v-col>
 
-      <v-col lg="4" xs="12">
+      <v-col lg="4" sm="12">
         <v-row class="pb-5 px-5">
         <v-card raised hover :dark=darkMode>
           <v-card-title>
@@ -120,7 +120,7 @@
   
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
-  <v-row>
+  <v-row class="d-flex flex-sm-row">
 
       <v-col lg="8" sm="12">
         <v-row class="pb-5 px-5">
@@ -227,14 +227,19 @@
   </v-row>
   </v-card>
   </v-tab-item>
+  
+  
+  <!-- ========================================  -->
+  <!-- ANALYTICS TAB-->
+  <!-- ========================================  -->
 
 
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
     <v-container fluid>
-    <v-row align-content="center">
+    <v-row class='d-flex flex-sm-row'>
 
-      <v-col lg="4" xs="12"> 
+      <v-col lg="4" sm="12"> 
         <v-card tile flat hover :height="cardHeight" color="purple lighten-2">
           <v-card-title>Customer Demographic</v-card-title>
           <v-card-text>
@@ -249,7 +254,7 @@
         </v-card>
 
       </v-col>
-      <v-col lg="4" xs="12">
+      <v-col lg="4" sm="12">
         <v-card tile flat hover :height="cardHeight" color="yellow lighten-2">
           <v-card-title>ECommerce Transactions</v-card-title>
           <v-card-text>
@@ -262,7 +267,7 @@
         </v-card>
       </v-col>
 
-      <v-col lg="4" xs="12">
+      <v-col lg="4" sm="12">
         <v-card tile flat hover :height="cardHeight" color="blue lighten-2">
           <v-card-title>Email Metrics</v-card-title>
           <v-card-text>
@@ -276,9 +281,9 @@
       </v-col>
     </v-row>  
 
-    <v-row align-content="center">
+    <v-row class="d-flex flex-sm-row">
 
-      <v-col lg="4" xs="12"> 
+      <v-col lg="4" sm="12"> 
         <v-card tile flat hover :height="cardHeight" color="red lighten-2">
           <v-card-title>Social Metrics</v-card-title>
           <v-card-text>
@@ -291,7 +296,7 @@
         </v-card>
       </v-col>
 
-      <v-col lg="4" xs="12">
+      <v-col lg="4" sm="12">
         <v-card tile flat hover :height="cardHeight" color="green lighten-2">
           <v-card-title>Website Metrics</v-card-title>
           <v-card-text>
@@ -304,7 +309,7 @@
         </v-card>
       </v-col>
 
-      <v-col lg="4" xs="12">
+      <v-col lg="4" sm="12">
         <v-card tile flat hover :height="cardHeight" color="orange lighten-2">
           <v-card-title>Ad Data</v-card-title>
           <v-card-text>

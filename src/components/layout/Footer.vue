@@ -22,8 +22,10 @@
   
   
         <v-card-text>
-          {{ new Date().getFullYear() }} — <strong>
-              Made with <v-icon>mdi-vuejs</v-icon>
+          <strong> {{ new Date().getFullYear() }} </strong> 
+          <span> — </span>  
+          <strong>
+            <span>Made with <v-icon>mdi-vuejs</v-icon></span>
           </strong>
         </v-card-text>
       </v-card>
