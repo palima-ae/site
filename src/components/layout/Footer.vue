@@ -25,7 +25,9 @@
           <strong> {{ new Date().getFullYear() }} </strong> 
           <span> — </span>  
           <strong>
-            <span>Made with <v-icon>mdi-vuejs</v-icon></span>
+            <span>Made with 
+              <v-icon>mdi-vuejs</v-icon>
+            </span>
           </strong>
         </v-card-text>
       </v-card>

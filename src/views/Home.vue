@@ -8,18 +8,19 @@
 
   <v-row>
     <v-col> 
-      <v-card :dark="darkMode" color="transparent" disabled flat> 
-        <v-card-text>
-        <h3>We leverage data to empower online advertising campaigns</h3>
-        <span>
-          Acquisit is a data-driven advertising agency. We stand between brands and online advertising platforms such as Google, Facebook, Snapchat. We analyse brand’s business model and leverage their data to make the most of online ads technologies and inventories. Our actions result in significant impact for our clients and a deep level of understanding of their key growth drivers.
-        </span>
+      <v-card :dark="darkMode" color="transparent" disabled flat align="center"> 
+        <v-card-title class="justify-center">
+            We leverage data to empower online marketing campaigns
+        </v-card-title>
+        <v-divider class="mx-10"></v-divider>
+        <v-card-text align="center">
+          We are a data-driven marketing agency. We stand between brands and online advertising platforms such as Google, Facebook, Snapchat. We analyse brand’s business model and leverage their data to make the most of online ads technologies and inventories. Our actions result in significant impact for our clients and a deep level of understanding of their key growth drivers.
         </v-card-text>
       </v-card>
     </v-col>
   </v-row>
 
-  <v-row>
+  <!-- <v-row>
     <v-col>
       <v-card :dark="darkMode" color="transparent" disabled flat>
         <v-card-text>
@@ -30,7 +31,7 @@
         </v-card-text>
       </v-card>
     </v-col>
-  </v-row>
+  </v-row> -->
 
 </div>
 </template>

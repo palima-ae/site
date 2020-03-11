@@ -24,7 +24,7 @@
         :dark="darkMode"
     >
 
-
+      <router-link to="/">
         <v-img
           alt="Palima Logo"
           class="shrink mr-2"
@@ -33,6 +33,7 @@
           transition="scale-transition"
           width="40"
         />
+      </router-link>
 
         <v-spacer></v-spacer>
         
