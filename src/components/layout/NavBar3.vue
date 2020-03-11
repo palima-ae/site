@@ -37,10 +37,16 @@
 
         <v-spacer></v-spacer>
         
-        <span>Data Driven Marketing
+        <span class="overline font-weight-thin" align="start">Data Driven Marketing
         </span>
 
 
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
@@ -62,7 +68,8 @@
                   v-on="on"
                   link to='/who'
               >
-                Who We Are
+                
+              <span class='body-2 font-weight-thin'>Who We Are</span>
             </v-btn>
             </template>
         </v-menu>
@@ -84,7 +91,7 @@
                   v-on="on"
                   link to="/expand"
               >
-                What We Do
+              <span class="body-2 font-weight-thin">What We Do</span>
             </v-btn>
             </template>
         
