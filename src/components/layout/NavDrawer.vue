@@ -6,6 +6,8 @@
           :value="drawerState"
           temporary
           :dark="darkMode"
+          right
+          width=70%
         >
           <v-list
             nav
@@ -13,12 +15,11 @@
           >
             <v-list-item two-line class="px-0">
               <v-list-item-avatar>
-                <img src="https://randomuser.me/api/portraits/men/81.jpg">
+                <img src="@/assets/palima.png">
               </v-list-item-avatar>
   
               <v-list-item-content>
-                <v-list-item-title>Application</v-list-item-title>
-                <v-list-item-subtitle>Subtext</v-list-item-subtitle>
+                <v-list-item-subtitle class="overline font-weight-thin">Data Driven Marketing</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
   
@@ -48,7 +49,7 @@
               @click.stop="updateDrawer"
             > 
               <v-list-item-icon>
-                <v-icon>mdi-menu-left</v-icon>
+                <v-icon>mdi-menu-right</v-icon>
               </v-list-item-icon>
               
               <v-list-item-content>

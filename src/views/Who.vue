@@ -66,11 +66,11 @@
           <v-card-text>
             <span>ESSEC Business School</span>
             <br>
-            <span class="ml-10 font-weight-light">Ranked 7th best in Europe</span>
+            <span class="ml-10 font-weight-light overline">Ranked 7th best in Europe</span>
             <br>
             <span>Nanyang Business School (Singapore)</span>
             <br>
-            <span class="ml-10 font-weight-light">Ranked 5th best in Asia</span>
+            <span class="ml-10 font-weight-light overline">Ranked 5th best in Asia</span>
             <br><br>
             <p>Strong Experience in Luxury Marketing</p>
             <span>Passionate about Web Technologies</span>
