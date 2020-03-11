@@ -12,25 +12,28 @@
 
 
     <v-col lg="6">
-      <v-card raised :dark="darkMode">
+
+      <v-card raised :dark="darkMode" class="mb-5">
       <v-row no-gutters>
 
         <v-col lg="4">
-          <v-card flat tile height=300 :dark="darkMode">
-            <v-img src="@/assets/max.jpg" height=210></v-img>
+          <v-card flat tile :dark="darkMode">
+            <v-img src="@/assets/max.jpg" height=210 style="border-right: 0.5px ridge lightgray"></v-img>
+            <div style="border-right: 0.5px ridge lightgray">
             <v-card-title>Maxime</v-card-title>
             <v-card-subtitle>Founder</v-card-subtitle>
+            </div>
           </v-card>
         </v-col>
         
         <v-col lg="8" align="start">
-          <v-card flat tile height=300 :dark="darkMode" class="px-4 pb-5">
+          <v-card flat tile :dark="darkMode" class="px-4">
           <v-card-subtitle>Background</v-card-subtitle>
           <v-divider></v-divider>
           <v-card-text>
             <span>ESSEC Business School</span>
             <br>
-            <span class="ml-10 font-weight-light">Ranked 8th best in Europe</span>
+            <span class="ml-10 font-weight-light">Ranked 7th best in Europe</span>
             <br>
             <span>Nanyang Business School (Singapore)</span>
             <br>
@@ -42,93 +45,128 @@
 
           <v-card-actions> 
             <v-spacer></v-spacer>
-            <v-btn text>Download CV</v-btn>
+            <v-btn text>CV</v-btn>
           </v-card-actions>
           </v-card>
         </v-col>
 
       </v-row>
       </v-card>
+
+
+      <v-card raised :dark="darkMode" class="mt-5">
+        <v-card-subtitle>Certified</v-card-subtitle>
+        <v-divider class="mx-4"></v-divider>
+        <v-expansion-panels>
+
+          <!-- FIRST PANNEL -->
+          <v-expansion-panel>
+            <v-expansion-panel-header>Google Analytics</v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  Analytics for Beginners
+                  <v-spacer></v-spacer>
+                  <v-btn text 
+                         class='font-weight-light'
+                         link to='/analytics-1'
+                         >
+                         View
+                  </v-btn>
+                </v-row>
+              </v-expansion-panel-content>
+            <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  Advanced Analytics
+                  <v-spacer></v-spacer>
+                  <v-btn text class='font-weight-light'>Download</v-btn>
+                </v-row>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+
+          <!-- SECOND PANNEL  -->
+          <v-expansion-panel>
+            <v-expansion-panel-header>IBM Data Science</v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  Open Source Tools for Data Science
+                  <v-spacer></v-spacer>
+                  <v-btn text class='font-weight-light'>Download</v-btn>
+                </v-row>
+              </v-expansion-panel-content>
+            <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  Data Science Methodology
+                  <v-spacer></v-spacer>
+                  <v-btn text class='font-weight-light'>Download</v-btn>
+                </v-row>
+            </v-expansion-panel-content>
+            <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  Python for Data Science and AI
+                  <v-spacer></v-spacer>
+                  <v-btn text class='font-weight-light'>Download</v-btn>
+                </v-row>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+
+          <!-- THIRD PANNEL  -->
+          <v-expansion-panel>
+            <v-expansion-panel-header>DataQuest Data Analyst</v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  SQL Fundamentals
+                  <v-spacer></v-spacer>
+                  <v-btn text class='font-weight-light'>Download</v-btn>
+                </v-row>
+              </v-expansion-panel-content>
+            <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  Python Data Cleaning
+                  <v-spacer></v-spacer>
+                  <v-btn text class='font-weight-light'>Download</v-btn>
+                </v-row>
+            </v-expansion-panel-content>
+            <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  Python Data Cleaning - Advanced
+                  <v-spacer></v-spacer>
+                  <v-btn text class='font-weight-light'>Download</v-btn>
+                </v-row>
+            </v-expansion-panel-content>
+            <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  Exploratory Data Visualization
+                  <v-spacer></v-spacer>
+                  <v-btn text class='font-weight-light'>Download</v-btn>
+                </v-row>
+            </v-expansion-panel-content>
+            <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  Storytelling Data Visualization
+                  <v-spacer></v-spacer>
+                  <v-btn text class='font-weight-light'>Download</v-btn>
+                </v-row>
+            </v-expansion-panel-content>
+            <v-expansion-panel-content>
+                <v-row class='mx-5 font-weight-light'>
+                  Pandas Fundamentals
+                  <v-spacer></v-spacer>
+                  <v-btn text class='font-weight-light'>Download</v-btn>
+                </v-row>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+
+
+        </v-expansion-panels>
+      </v-card>
+
     </v-col>
 
 
 
-<!-- <v-col lg="6">
-<v-card
-      class="mx-auto"
-      tile
-    >
-        <v-row
-          align="end"
-          class="fill-height"
-        >
-          <v-col
-            align-self="start"
-            class="pa-0"
-            cols="12"
-          >
-            <v-avatar
-              color="grey"
-              size="164"
-              tile
-            >
-              <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
-            </v-avatar>
-          </v-col>
-          <v-col class="py-0">
-            <v-list-item
-              color="rgba(0, 0, 0, .4)"
-              dark
-            >
-              <v-list-item-content>
-                <v-list-item-title class="title">Marcus Obrien</v-list-item-title>
-                <v-list-item-subtitle>Network Engineer</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-col>
-        </v-row>
-    </v-card>
-</v-col> -->
 
 
-
-
-    <!-- <v-col
-            lg="6"
-          >
-            <v-card
-              :dark="darkMode"
-            >
-              <div class="d-flex flex-no-wrap" align="center">
-                <v-avatar
-                  height=200
-                  width=140
-                  left
-                  tile
-                >
-                  <v-img src="@/assets/max.jpg"></v-img>
-                </v-avatar>
-                <div>
-                  <v-card-title>Maxime Mansour</v-card-title>
-                  <v-card-subtitle class='my--2'><span class="ml-3">Founder</span></v-card-subtitle>
-                  <v-divider></v-divider>
-                  <v-card-text class="pb-3 mb-5">
-                    <span>ESSEC Business School (France)</span>
-                    <br>
-                    <span>Nanyang Business School (Singapore)</span>
-                    <br><br>
-                    <span>Strong Experience in Luxury Marketing</span>
-                    <br>
-                    <span>Passionate about Web Technologies</span>
-                  </v-card-text>
-                </div>
-  
-              </div>
-            </v-card>
-          </v-col> -->
-
-
-    <v-col>
+    <v-col lg="4">
       <v-card :dark="darkMode">
         <v-card-subtitle align="center">
           Technical Skills

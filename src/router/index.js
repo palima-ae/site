@@ -9,6 +9,7 @@ import What from '../views/What'
 import SEO from '../views/SEO'
 import Expand from '../views/Expand'
 import Who from '../views/Who'
+import Beginner from '@/views/Beginner'
 
 
 Vue.use(VueRouter)
@@ -21,6 +22,7 @@ const routes = [
   {path: '/seo', name: 'seo', component: SEO},
   {path: '/expand', name: 'expand', component: Expand},
   {path: '/who', name: 'who', component: Who},
+  {path: '/analytics-1', name: 'analytics-1', component: Beginner},
   { path: '/grid', name: 'grid', component: Grid },
   { path: '/cards', name: 'cardlist', component: CardList },
   { path: '/cards/:id', name: 'card', component: CardList,
