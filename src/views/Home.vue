@@ -2,7 +2,7 @@
 <div>
   <v-row>
     <v-col> 
-        <v-img contain height="500" src="@/assets/iconstackblue.png"></v-img>
+        <v-img contain height="450" src="@/assets/iconstackblue.png"></v-img>
     </v-col>
   </v-row>
 

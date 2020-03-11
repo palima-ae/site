@@ -287,7 +287,9 @@
   <!-- ========================================  -->
   </v-tab-item>
   
-  
+    <v-card tile flat :color="appBgColor" class="pt-10">
+      <v-card-text large class="font-weight-medium text-center">palima.ae@protonmail.com</v-card-text>
+    </v-card>
   
   </v-tabs-items>
 
