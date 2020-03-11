@@ -18,37 +18,51 @@
 
   <v-tabs-items v-model="tabs">
       
+  <!-- ========================================  -->
+  <!-- SEO & ADS TAB -->
+  <!-- ========================================  -->
+  
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
   <v-row>
 
       <v-col lg="8" sm="12">
         <v-row class="pb-5 px-5">
-          <v-card shaped hover :dark="darkMode">
+          <v-card shaped hover :dark="darkMode" width=100%>
             <v-card-title>
               <v-icon class="pl-2" large>mdi-chart-areaspline</v-icon>
               <span class="pl-8">Traffic Growth</span>
+              <v-spacer></v-spacer>
+              <v-icon @click.stop="displaySEOelem1 = !displaySEOelem1">
+                {{ displaySEOelem1===false ? downIcon : upIcon }}
+              </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text class="px-8">
-              <p>If you're looking for serious business growth, SEO, or search engine optimization is the 
-                strategy for you: It targets the users that are most likely to convert on your website, and takes them there.</p>
-              <p>A custom SEO campaign targets on-page and off-page SEO includes things like keyword research 
-                and content implementation, which helps your audience find you online.</p>
+            <v-card-text :style="showSEOelem1" class="px-8">
+              <p>If you are looking for serious business growth, SEO is the 
+                strategy for you.
+                <br>
+                It targets the users that are most likely to convert on your website, and takes them there.</p>
+              <p>A custom SEO campaign targets on-page and off-page SEO, and can include things like keyword research 
+                and content implementation to your audience find you online.</p>
               <p>We also analyze the results of your business’s SEO strategy to ensure that your campaign is 
                 performing at its best.</p>
             </v-card-text>
           </v-card>
         </v-row>
         <v-row class="pb-5 px-5">
-          <v-card shaped hover :dark="darkMode">
+          <v-card shaped hover :dark="darkMode" width=100%>
             <v-card-title>
               <v-icon class="pl-2" large>mdi-google-maps</v-icon>
               <span class="pl-8">Local SEO</span>
+              <v-spacer></v-spacer>
+              <v-icon @click.stop="displaySEOelem2 = !displaySEOelem2">
+                {{ displaySEOelem2===false ? downIcon : upIcon }}
+              </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text class="px-8"> 
-              <p>Local SEO services can ensure that your customers find you locally, and that you’re always top of 
+            <v-card-text :style="showSEOelem2" class="px-8"> 
+              <p>Local SEO services can ensure that your customers find you locally, and that you are always top of 
                 mind when customers are in your neighborhood.</p>
               <p>When potential customers search businesses like yours in their area, you want to appear at 
                 the top of results.</p>
@@ -58,13 +72,17 @@
           </v-card>
         </v-row>
         <v-row class="pb-5 px-5">
-          <v-card shaped hover :dark="darkMode" min-height=240>
+          <v-card shaped hover :dark="darkMode" width=100%>
             <v-card-title>
               <v-icon class="pl-2" large>mdi-google-ads</v-icon>
               <span class="pl-8">Online Advertising</span>
+              <v-spacer></v-spacer>
+              <v-icon @click.stop="displaySEOelem3 = !displaySEOelem3">
+                {{ displaySEOelem3===false ? downIcon : upIcon }}
+              </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text class="px-8"> 
+            <v-card-text :style="showSEOelem3" class="px-8"> 
               <p>PPC, or pay-per-click advertising, is one of the best ways to target your 
                 most qualified audience. It allows you to reach them where they’re already looking, 
                 and gain a leg up against competitors.</p>
@@ -96,21 +114,27 @@
   </v-card>
   </v-tab-item>
 
-
-
+  <!-- ========================================  -->
+  <!-- EMAIL CAMPAIGN TAB -->
+  <!-- ========================================  -->
+  
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
   <v-row>
 
       <v-col lg="8" sm="12">
         <v-row class="pb-5 px-5">
-          <v-card shaped hover :dark="darkMode">
+          <v-card shaped hover :dark="darkMode" width=100%>
             <v-card-title>
               <v-icon class="pl-2" large>mdi-target-account</v-icon>
               <span class="pl-8">Tailored Campaigns</span>
+              <v-spacer></v-spacer>
+              <v-icon @click.stop="displayEmailelem1 = !displayEmailelem1">
+                {{ displayEmailelem1===false ? downIcon : upIcon }}
+              </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text>
+            <v-card-text :style="showEmailelem1" class="px-8">
               <p>Email marketing is one of the best web marketing strategies for your business to increase brand awareness, 
                 remind people of your business, and keep shoppers coming back for more.</p>
               <p>To get the most out of your email marketing strategy, you have to build a strong campaign 
@@ -123,13 +147,17 @@
           </v-card>
         </v-row>
         <v-row class="pb-5 px-5">
-          <v-card shaped hover :dark="darkMode">
+          <v-card shaped hover :dark="darkMode" width=100%>
             <v-card-title>
               <v-icon class="pl-2" large>mdi-account-convert</v-icon>
               <span class="pl-8">Lead Nurturing</span>
+              <v-spacer></v-spacer>
+              <v-icon @click.stop="displayEmailelem2 = !displayEmailelem2">
+                {{ displayEmailelem2===false ? downIcon : upIcon }}
+              </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text> 
+            <v-card-text :style="showEmailelem2" class="px-8"> 
               <p>Your customers' purchasing decisions can take weeks (or months!), 
                so it's essential that you nurture your leads over time to turn them into paying customers. 
                Intelligent email is one of the most effective forms of lead nurturing on the market.</p>
@@ -152,13 +180,17 @@
           </v-card>
         </v-row>
         <v-row class="pb-5 px-5">
-          <v-card shaped hover :dark="darkMode" min-height=240>
+          <v-card shaped hover :dark="darkMode" width=100%>
             <v-card-title>
               <v-icon class="pl-2" large>mdi-monitor-dashboard</v-icon>
               <span class="pl-8">Monitoring</span>
+              <v-spacer></v-spacer>
+              <v-icon @click.stop="displayEmailelem3 = !displayEmailelem3">
+                {{ displayEmailelem3===false ? downIcon : upIcon }}
+              </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text> 
+            <v-card-text :style="showEmailelem3" class="px-8"> 
               <p>As with any marketing strategy, it’s important to monitor how well your email strategy is 
                 performing so can make sure you're nurturing your leads well. With our reports, you can view sends, opens, and 
                 clicks right as they happen.
@@ -309,6 +341,18 @@ export default {
     return {
       tabs: null,  
       cardHeight: 300,
+      upIcon: "mdi-chevron-up",
+      downIcon: "mdi-chevron-down",
+
+      displaySEOelem1: false,
+      displaySEOelem2: false,
+      displaySEOelem3: false, 
+
+      displayEmailelem1: false,
+      displayEmailelem2: false,
+      displayEmailelem3: false,
+      displayEmailelem4: false,
+
       seo_services : [
         "Web server analysis & reporting", 
         "Keyphrase research & selection", 
@@ -365,6 +409,34 @@ export default {
     ...mapGetters(['darkMode']),
     appBgColor () {return (this.darkMode ? "black" : "#F8F8FF")},
     tabBarClass () {return (this.dw_getWindowDims.width<960 ? "mobTabBar" : "deskTabBar")},
+    showSEOelem1() {
+      var displayValue = (this.displaySEOelem1===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showSEOelem2() {
+      var displayValue = (this.displaySEOelem2===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showSEOelem3() {
+      var displayValue = (this.displaySEOelem3===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showEmailelem1() {
+      var displayValue = (this.displayEmailelem1===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showEmailelem2() {
+      var displayValue = (this.displayEmailelem2===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showEmailelem3() {
+      var displayValue = (this.displayEmailelem3===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showEmailelem4() {
+      var displayValue = (this.displayEmailelem4===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
 
     dw_getWindowDims() {
       var doc = document, w = window;

@@ -20,8 +20,10 @@
           <v-col cols="10">
             <v-card-title>Search</v-card-title>
             <v-card-text>
-                <p>There is an existing demand for products and services like yours and Search is the right channel to capture it.</p>
-                <p>We design and execute tailor-made search strategies to drive optimal account performance, reach maximize your ROI on the channel which is the closest to conversion.</p>
+                <p>There is an existing demand for products and services like 
+                  yours and Search is the right channel to capture it.</p>
+                <p>We design and execute tailor-made search strategies to 
+                  drive optimal account performance, reach maximize your ROI on the channel which is the closest to conversion.</p>
             </v-card-text>
           </v-col>
         </v-row>

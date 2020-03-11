@@ -1,15 +1,37 @@
 <template>
 <v-container>
 
-  <v-row>
 
-    <v-col lg=2 align="center">
+    <!-- <v-col lg=2 align="center">
       <h2>Our Team</h2>
         <v-divider></v-divider>
+    </v-col> -->
+
+
+    <v-tabs
+      v-model="tabs"
+      height=100
+      centered
+      :background-color="appBgColor"
+      :dark="darkMode"
+      :class="tabBarClass"
+      active-class="text-accent-6"
+    >
+      <v-tab>TEAM</v-tab>
+      <v-tab>CONTACT</v-tab>
+    </v-tabs>
+
+
+  <v-tabs-items v-model="tabs">
+
+
+  <v-tab-item>
+  <v-card flat tile height="100%" :color="appBgColor">
+
+  <v-row>
+
+    <v-col lg="2">
     </v-col>
-
-
-
 
     <v-col lg="6">
 
@@ -246,7 +268,12 @@
     </v-col>
   
   </v-row>
-
+  </v-card>
+  </v-tab-item>
+  
+  
+  
+  </v-tabs-items>
 
 </v-container>
 </template>
@@ -262,6 +289,7 @@ export default {
 
     data () {
         return {
+          tabs: null, 
 
           skills : [
             {name: "python", icon:"mdi-language-python", value: 90},
@@ -286,7 +314,8 @@ export default {
     // end DATA
     
     computed: {
-      ...mapGetters(['darkMode'])
+      ...mapGetters(['darkMode']),
+    appBgColor () {return (this.darkMode ? "black" : "#F8F8FF")},
 
     }
 }
