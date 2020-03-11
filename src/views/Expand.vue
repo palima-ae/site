@@ -120,13 +120,17 @@
 
       <v-col cols="12" lg="4" sm="12" md="12">
         <v-row class="pb-5 px-5">
-        <v-card raised hover :dark=darkMode width=100%>
+        <v-card raised hover :dark=darkMode width=100% id="servicesCard">
           <v-card-title>
               <v-icon class="pl-2" large>mdi-book-open-page-variant</v-icon>
               <span class="pl-8">Services</span>
+              <v-spacer></v-spacer>
+              <v-icon large @click.stop="displaySEOservices = !displaySEOservices">
+                {{ displaySEOservices===false ? downIcon : upIcon }}
+              </v-icon>
           </v-card-title>
           <v-divider class="mx-4"></v-divider>
-          <v-card-text>
+          <v-card-text :style="showSEOservices">
             <ul id="example-1">
               <li v-for="(service, index) in seo_services" :key="index">  
                 <span class="pl-2">{{ service }}</span>
@@ -266,13 +270,17 @@
 
       <v-col cols="auto" lg="4" xs="12">
         <v-row class="pb-5 px-5">
-        <v-card raised hover :dark=darkMode>
+        <v-card raised hover :dark=darkMode id="servicesCard" width=100%>
           <v-card-title>
               <v-icon class="pl-2" large>mdi-book-open-page-variant</v-icon>
               <span class="pl-8">Services</span>
+              <v-spacer></v-spacer>
+              <v-icon large @click.stop="displayEmailservices = !displayEmailservices">
+                {{ displayEmailservices===false ? downIcon : upIcon }}
+              </v-icon>
           </v-card-title>
           <v-divider class="mx-4"></v-divider>
-          <v-card-text>
+          <v-card-text :style="showEmailservices">
             <ul id="example-1">
               <li v-for="(service, index) in email_services" :key="index">  
                 <span class="pl-2">{{ service }}</span>
@@ -291,99 +299,152 @@
   <!-- ========================================  -->
   <!-- ANALYTICS TAB-->
   <!-- ========================================  -->
-
-
+  
+  
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
-    <v-container fluid>
-    <v-row class='d-flex flex-sm-row'>
+  <v-row class="flex-row">
 
-      <v-col lg="4" sm="12"> 
-        <v-card tile flat hover :height="cardHeight" color="purple lighten-2">
-          <v-card-title>Customer Demographic</v-card-title>
-          <v-card-text>
-            <p>You can’t create products or market them 
-                properly without understanding the demographics of your audience.
-            </p>
-            <p> Collecting and analyzing relevant data will allow you to
-              market a product that speaks to your target audience. The right customer data 
-              platform software can keep demographic data stored and organized correctly.
-            </p>
+      <v-col cols="12" lg="8" sm="12">
+        <v-row class="pb-5 px-5">
+          <v-card shaped hover :dark="darkMode" width=100%>
+            <v-card-title>
+              <v-icon class="pl-2" large>mdi-database</v-icon>
+              <span class="pl-8">Data Platform</span>
+              <v-spacer></v-spacer>
+              <v-icon large @click.stop="displayAnalelem1 = !displayAnalelem1">
+                {{ displayAnalelem1===false ? downIcon : upIcon }}
+              </v-icon>
+            </v-card-title>
+            <v-divider class="mx-4"></v-divider>
+            <v-card-text :style="showAnalelem1" class="px-8">
+              <p>Often, businesses do not know how to handle all their data because of the sheer volume. 
+                From user demographics to time on page, these are just two examples of the dozens of data 
+                points you might encounter daily.
+              </p>
+              <p>You organize the data that you have access to with a customer data platform,
+                 and combine it with data from other platforms. This streamlined organization can help 
+                 you make the best decisions for your business.
+              </p>
+              <p>We can help you build pipelines to better collect customer data, store it and analyze it against
+                other data and even other platforms to provide valuable strategic insights
+              </p>
+              <p>Here are some data types that you can store within your data platforms:</p>
+              <ul>
+                <li>Customer Demographics</li>
+                <li>Ecommerce Transactions</li>
+                <li>Email Information</li>
+                <li>Social Media Interactions</li>
+                <li>Website Metrics</li>
+                <li>Ad Data</li>
+              </ul>
+
+
+            </v-card-text>
+          </v-card>
+        </v-row>
+        <v-row class="pb-5 px-5">
+          <v-card shaped hover :dark="darkMode" width=100%>
+            <v-card-title>
+              <v-icon class="pl-2" large>mdi-pickaxe</v-icon>
+              <span class="pl-8">Data Mining</span>
+              <v-spacer></v-spacer>
+              <v-icon large @click.stop="displayAnalelem2 = !displayAnalelem2">
+                {{ displayAnalelem2===false ? downIcon : upIcon }}
+              </v-icon>
+            </v-card-title>
+            <v-divider class="mx-4"></v-divider>
+            <v-card-text :style="showAnalelem2" class="px-8"> 
+              <p>Analyze your data. Identify trends and derive segmentation. We integrate marketplace data 
+                with your own data and explore correlations, create custom 
+                clusters, and do targeting on your custom clusters.
+              </p>
+              <p>Gain competitive insights into who your customers are, where they live, 
+                as well as their lifestyle, shopping patterns and media consumption.
+              </p>
+              <p>Insights gathered from these profiles are often used to develop 
+                  new business development and retention strategies.
+              </p>
+            </v-card-text>
+          </v-card>
+        </v-row>
+        <v-row class="pb-5 px-5">
+          <v-card shaped hover :dark="darkMode" width=100%>
+            <v-card-title>
+              <v-icon class="pl-2" large>mdi-account-check</v-icon>
+              <span class="pl-8">Conversion Audit</span>
+              <v-spacer></v-spacer>
+              <v-icon large @click.stop="displayAnalelem3 = !displayAnalelem3">
+                {{ displayAnalelem3===false ? downIcon : upIcon }}
+              </v-icon>
+            </v-card-title>
+            <v-divider class="mx-4"></v-divider>
+            <v-card-text :style="showAnalelem3" class="px-8"> 
+              <p>Having your visitors perform a desired action once they land on your pages is the 
+                driving force behind increased revenue. We understand that maximizing client 
+                conversions is fundamental to your success, which is why our CRO services provide:
+              </p>
+              <ul>
+                <li>Analysis of webpage usability, conversion rate, copy, and aesthetics to determine areas of improvement</li>
+                <li>Analyzing your data to make informed decisions and recommendations</li>
+                <li>Actionable steps, based on data, that you can implement to take advantage of the conversion potential of your traffic</li>
+              </ul>
+            </v-card-text>
+          </v-card>
+        </v-row>
+        <v-row class="pb-5 px-5">
+          <v-card shaped hover :dark="darkMode" width=100%>
+            <v-card-title>
+              <v-icon class="pl-2" large>mdi-filter</v-icon>
+              <span class="pl-8">Website Funnel</span>
+              <v-spacer></v-spacer>
+              <v-icon large @click.stop="displayAnalelem4 = !displayAnalelem4">
+                {{ displayAnalelem4===false ? downIcon : upIcon }}
+              </v-icon>
+            </v-card-title>
+            <v-divider class="mx-4"></v-divider>
+            <v-card-text :style="showAnalelem4" class="px-8"> 
+              <p>Even if your site is extremely easy to navigate, your traffic quality may be too poor to 
+                  encourage conversions.
+              </p>
+              <p>Conversion funnels are the paths through your site that visitors follow before converting.
+              </p>
+              <p>Each page between an entrance page and a conversion page is an opportunity for your visitor 
+                  to become distracted and leave. If your conversion funnels are too intricate, potential 
+                  conversions will leave the path and that conversion will be lost.
+              </p>
+              <p>Conversion funnel analysis ensures that qualified visitors stay on the right track to 
+                conversions
+              </p>
+            </v-card-text>
+          </v-card>
+        </v-row>
+      </v-col>
+
+      <v-col cols="auto" lg="4" xs="12">
+        <v-row class="pb-5 px-5">
+        <v-card hover :dark=darkMode width=100% id="servicesCard">
+          <v-card-title>
+              <v-icon class="pl-2" large>mdi-book-open-page-variant</v-icon>
+              <span class="pl-8">Services</span>
+              <v-spacer></v-spacer>
+              <v-icon large @click.stop="displayAnalservices = !displayAnalservices">
+                {{ displayAnalservices===false ? downIcon : upIcon }}
+              </v-icon>
+          </v-card-title>
+          <v-divider class="mx-4"></v-divider>
+          <v-card-text :style="showAnalservices">
+            <ul id="example-1">
+              <li v-for="(service, index) in analytics_services" :key="index">  
+                <span class="pl-2">{{ service }}</span>
+              </li>
+            </ul>
           </v-card-text>
         </v-card>
-
-      </v-col>
-      <v-col lg="4" sm="12">
-        <v-card tile flat hover :height="cardHeight" color="yellow lighten-2">
-          <v-card-title>ECommerce Transactions</v-card-title>
-          <v-card-text>
-            <p>Your ecommerce transaction data can work well with demographic data to recognize 
-                trends among your overall audience. When you start looking at more than one area 
-                of data, you can see how beneficial it is to have it all in one place on your 
-                customer data platform.
-            </p>
-          </v-card-text>
-        </v-card>
+        </v-row>
       </v-col>
 
-      <v-col lg="4" sm="12">
-        <v-card tile flat hover :height="cardHeight" color="blue lighten-2">
-          <v-card-title>Email Metrics</v-card-title>
-          <v-card-text>
-            <p>Your ecommerce transaction data can work well with demographic data to recognize 
-                trends among your overall audience. When you start looking at more than one area 
-                of data, you can see how beneficial it is to have it all in one place on your 
-                customer data platform.
-            </p>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>  
-
-    <v-row class="d-flex flex-sm-row">
-
-      <v-col lg="4" sm="12"> 
-        <v-card tile flat hover :height="cardHeight" color="red lighten-2">
-          <v-card-title>Social Metrics</v-card-title>
-          <v-card-text>
-            <p>Your ecommerce transaction data can work well with demographic data to recognize 
-                trends among your overall audience. When you start looking at more than one area 
-                of data, you can see how beneficial it is to have it all in one place on your 
-                customer data platform.
-            </p>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <v-col lg="4" sm="12">
-        <v-card tile flat hover :height="cardHeight" color="green lighten-2">
-          <v-card-title>Website Metrics</v-card-title>
-          <v-card-text>
-            <p>Your ecommerce transaction data can work well with demographic data to recognize 
-                trends among your overall audience. When you start looking at more than one area 
-                of data, you can see how beneficial it is to have it all in one place on your 
-                customer data platform.
-            </p>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <v-col lg="4" sm="12">
-        <v-card tile flat hover :height="cardHeight" color="orange lighten-2">
-          <v-card-title>Ad Data</v-card-title>
-          <v-card-text>
-            <p>Your ecommerce transaction data can work well with demographic data to recognize 
-                trends among your overall audience. When you start looking at more than one area 
-                of data, you can see how beneficial it is to have it all in one place on your 
-                customer data platform.
-            </p>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-    </v-row>
-
-    </v-container> 
+  </v-row>
   </v-card>
   </v-tab-item>
 
@@ -412,11 +473,19 @@ export default {
       displaySEOelem2: false,
       displaySEOelem3: false, 
       displaySEOelem4: false, 
+      displaySEOservices: true,
 
       displayEmailelem1: false,
       displayEmailelem2: false,
       displayEmailelem3: false,
       displayEmailelem4: false,
+      displayEmailservices: true,
+
+      displayAnalelem1: false,
+      displayAnalelem2: false,
+      displayAnalelem3: false,
+      displayAnalelem4: false,
+      displayAnalservices: true,
 
       seo_services : [
         "Web server analysis & reporting", 
@@ -465,7 +534,33 @@ export default {
         "Clickthrough rate reports per drip stage", 
         "Complete visitor/lead lifecycle \t\n view (website visits, pages viewed, emails viewed, emails opened, etc.)",
         "Triggered emails based on web visitor behavior"
-]
+      ],
+
+      analytics_services: [
+        "Audit of current server configuration",
+        "Setup and/or configuration of a CDN",
+        "Caching setup and/or configuration", 
+        "Setup of browser caching", 
+        "Minify JavaScript",
+        "Conversion tracking code setup", 
+        "Goal Funnels Setup - Initial Analytics + Reporting", 
+        "Initial Conversion Audit - What Portions of Site to Test/Optimize for Conversions + Optimization Suggestions", 
+        "Use of Google Optimize for A/B testing (Client Google Analytics access is required)", 
+        "Initial heatmap and click stream testing and analysis", 
+        "ROI & split test reporting schedule", 
+        "Conversion strategy", 
+        "Conversion best practices documentation", 
+        "Static calls to action design", 
+        "Navigational modifications", 
+        "Multivariate conversion testing", 
+        "Setup of auto responders", 
+        "Incoming traffic reporting and recommendations", 
+        "Incoming traffic analysis", 
+        "Conversion path implementation", 
+        "Shopping cart abandonment testing"
+
+
+      ]
     }
   },
 
@@ -490,6 +585,10 @@ export default {
       var displayValue = (this.displaySEOelem4===false ? "none" : "")
       return ('display:' + displayValue)
       },
+    showSEOservices() {
+      var displayValue = (this.displaySEOservices===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
     showEmailelem1() {
       var displayValue = (this.displayEmailelem1===false ? "none" : "")
       return ('display:' + displayValue)
@@ -504,6 +603,30 @@ export default {
       },
     showEmailelem4() {
       var displayValue = (this.displayEmailelem4===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showEmailservices() {
+      var displayValue = (this.displayEmailservices===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showAnalelem1() {
+      var displayValue = (this.displayAnalelem1===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showAnalelem2() {
+      var displayValue = (this.displayAnalelem2===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showAnalelem3() {
+      var displayValue = (this.displayAnalelem3===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showAnalelem4() {
+      var displayValue = (this.displayAnalelem4===false ? "none" : "")
+      return ('display:' + displayValue)
+      },
+    showAnalservices() {
+      var displayValue = (this.displayAnalservices===false ? "none" : "")
       return ('display:' + displayValue)
       },
 
@@ -562,5 +685,9 @@ export default {
   padding-bottom: 5px;
 }
 
+#servicesCard {
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px
+}
 
 </style>

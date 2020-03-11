@@ -310,7 +310,7 @@ export default {
           tabs: null, 
 
           skills : [
-            {name: "python", icon:"mdi-language-python", value: 90},
+            {name: "python", icon:"mdi-language-python", value: 100},
             {name: "javascript", icon:"mdi-language-javascript", value:40},
             {name: 'vue js', icon:'mdi-vuejs', value:70},
             {name: "google analytics", icon:'mdi-google-analytics', value:90},
@@ -318,10 +318,11 @@ export default {
             {name: "google firebase", icon:"mdi-firebase", value:60},
             {name: 'email campaigns', icon:"mdi-email-edit", value:90},
             {name: "backend development", icon:"mdi-database", value:100},
+            {name: "data visualization", icon: 'mdi-desktop-mac-dashboard', value:70},
+            {name: "desktop apps", icon: 'mdi-desktop-mac', value:80},
+            {name: "mobile apps", icon:'mdi-cellphone-iphone', value:50},
             {name: "apache kafka", icon:"mdi-apache-kafka", value:70},
             {name: "api design", icon:"mdi-api", value:85},
-            {name: "desktop apps", icon: 'mdi-desktop-mac', value:80},
-            {name: "data visualization", icon: 'mdi-desktop-mac-dashboard', value:70},
 
 
             
@@ -334,8 +335,39 @@ export default {
     computed: {
       ...mapGetters(['darkMode']),
     appBgColor () {return (this.darkMode ? "black" : "#F8F8FF")},
+    tabBarClass () {return (this.dw_getWindowDims.width<960 ? "mobTabBar" : "deskTabBar")},
+    dw_getWindowDims() {
+      var doc = document, w = window;
+      var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
+              doc.documentElement: doc.body;
+      
+      var width = docEl.clientWidth;
+      var height = docEl.clientHeight;
+      
+      // mobile zoomed in?
+      if ( w.innerWidth && width > w.innerWidth ) {
+          width = w.innerWidth;
+          height = w.innerHeight;
+      }
+      return {width: width, height: height};
+    },
 
     }
 }
 
 </script>
+
+
+<style lang="scss" scoped>
+
+.mobTabBar {
+  margin: auto;
+  width: 90vw;
+}
+
+.deskTabBar {
+  padding-bottom: 5px;
+}
+
+
+</style>
