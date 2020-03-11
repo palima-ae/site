@@ -268,7 +268,7 @@
         </v-row>
       </v-col>
 
-      <v-col cols="auto" lg="4" xs="12">
+      <v-col cols="12" lg="4" xs="12">
         <v-row class="pb-5 px-5">
         <v-card raised hover :dark=darkMode id="servicesCard" width=100%>
           <v-card-title>
@@ -421,7 +421,7 @@
         </v-row>
       </v-col>
 
-      <v-col cols="auto" lg="4" xs="12">
+      <v-col cols="12" lg="4" xs="12">
         <v-row class="pb-5 px-5">
         <v-card hover :dark=darkMode width=100% id="servicesCard">
           <v-card-title>
