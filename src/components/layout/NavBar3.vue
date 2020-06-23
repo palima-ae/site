@@ -2,21 +2,46 @@
   <div>
     <!-- SYSTEM BAR -->
     <v-system-bar
-        app 
-        :id="sysbarID" 
+        app
+        :id="sysbarID"
         :dark="darkMode"
         :color="systemBgColor"
         height="40"
         fixed
         >
         <v-spacer></v-spacer>
-        <v-icon>mdi-wifi-strength-4</v-icon>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-icon>mdi-map-marker-outline</v-icon>
+        <span class="caption font-weight-thin">{{ timezone }}</span>
+        <!-- <v-icon>mdi-wifi-strength-4</v-icon>
         <v-icon>mdi-signal-cellular-outline</v-icon>
-        <v-icon>mdi-battery</v-icon>
-        <span>{{ currentTime }}</span>
+        <v-icon>mdi-battery</v-icon> -->
+        <v-spacer></v-spacer>
+        <v-icon>mdi-clock-outline</v-icon>
+        <span class="caption font-weight-thin">{{ timestamp }}</span>
       </v-system-bar>
 
-    <v-app-bar 
+    <v-app-bar
         :id="navbarID"
         app
         scroll-target="scrolling-techniques-4"
@@ -29,14 +54,14 @@
           alt="Palima Logo"
           class="shrink mr-2"
           contain
-          src="@/assets/palima.png"
+          src="@/assets/logo_with_text.png"
           transition="scale-transition"
           width="40"
         />
       </router-link>
 
         <v-spacer></v-spacer>
-        
+
         <span class="overline font-weight-thin" align="start">Data Driven Marketing
         </span>
 
@@ -68,7 +93,7 @@
                   v-on="on"
                   link to='/who'
               >
-                
+
               <span class='body-2 font-weight-thin'>Who We Are</span>
             </v-btn>
             </template>
@@ -89,12 +114,12 @@
                   class = "hidden-xs-only"
                   text
                   v-on="on"
-                  link to="/expand"
+                  link to="/what"
               >
               <span class="body-2 font-weight-thin">What We Do</span>
             </v-btn>
             </template>
-        
+
             <!-- <v-list>
               <v-list-item-group
                 v-model="group"
@@ -108,7 +133,7 @@
                   <v-list-item-icon>
                     <v-icon>{{ item.icon }}</v-icon>
                   </v-list-item-icon>
-      
+
                   <v-list-item-content>
                     <v-list-item-title>{{ item.title }}</v-list-item-title>
                   </v-list-item-content>
@@ -117,17 +142,17 @@
             </v-list> -->
 
         </v-menu>
-  
+
 
         <v-spacer></v-spacer>
 
 
-  
+
         <v-btn text @click.stop="updateDarkMode">
           <v-icon :color="bulbIconColor"> {{ bulbIcon }} </v-icon>
         </v-btn>
 
-        <v-app-bar-nav-icon 
+        <v-app-bar-nav-icon
           class="hidden-sm-and-up"
           @click.native.stop="updateDrawer"
           >
@@ -154,11 +179,22 @@ export default {
             { title: 'Performance Advertisting', icon: 'mdi-account', route: '/who' },
             { title: 'Web Technologies Consulting', icon: 'mdi-view-dashboard', route: '/dashboard' },
             { title: 'Contact', icon: 'mdi-file-table', route: '/tradeshistory' },
-            ]
-        }        
+            ],
+            timestamp: '',
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+        }
     },
     // end DATA
-    
+
+
+    created() {
+      setInterval(() => {
+        this.getNow();
+      }, 1000)
+    },
+    // end CREATED
+
+
     computed: {
       ...mapGetters(['mainColor', 'drawerState', 'darkMode', "isMobile"]),
 
@@ -182,16 +218,17 @@ export default {
         let minutes = currentDate.getMinutes()
         return (hours + ":" + minutes)
       },
+
       systemBgColor () {return (this.darkMode ? "rbg(0,0,0)" : "rgb(248, 248, 255)")},
 
       dw_getWindowDims() {
         var doc = document, w = window;
         var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
                 doc.documentElement: doc.body;
-        
+
         var width = docEl.clientWidth;
         var height = docEl.clientHeight;
-        
+
         // mobile zoomed in?
         if ( w.innerWidth && width > w.innerWidth ) {
             width = w.innerWidth;
@@ -201,13 +238,13 @@ export default {
       },
 
       navbarID () {
-        
+
         var width = this.dw_getWindowDims.width;
         var id_value = (width<960 ? "mobNavBar" : "deskNavBar")
         return id_value
       },
       sysbarID () {
-        
+
         var width = this.dw_getWindowDims.width;
         var id_value = (width<960 ? "mobSysBar" : "deskSysBar")
         return id_value
@@ -218,6 +255,12 @@ export default {
 
     methods: {
       ...mapActions(['updateDrawer', 'updateDarkMode']),
+      getNow () {
+      const today = new Date();
+      const Hours = today.getHours().toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+      const Minutes = today.getMinutes().toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+      this.timestamp = Hours + ":" + Minutes;
+      },
     },
 
 }

@@ -1,14 +1,14 @@
 <template>
 <div>
   <v-row>
-    <v-col> 
+    <v-col>
         <v-img contain height="450" src="@/assets/iconstackblue.png"></v-img>
     </v-col>
   </v-row>
 
   <v-row>
-    <v-col> 
-      <v-card :dark="darkMode" color="transparent" disabled flat align="center"> 
+    <v-col>
+      <v-card :dark="darkMode" color="transparent" disabled flat align="center">
         <v-card-title class="justify-center">
             We leverage data to empower online marketing campaigns
         </v-card-title>
@@ -45,7 +45,7 @@ export default {
 
     data () {
         return {
-        }        
+        }
     },
     // end DATA
 

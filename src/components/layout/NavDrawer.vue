@@ -1,5 +1,5 @@
 <template>
-    
+
     <!-- NAVIGATION DRAWER -->
         <v-navigation-drawer
           app
@@ -17,14 +17,14 @@
               <v-list-item-avatar>
                 <img src="@/assets/palima.png">
               </v-list-item-avatar>
-  
+
               <v-list-item-content>
                 <v-list-item-subtitle class="overline font-weight-thin">Data Driven Marketing</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
-  
+
             <v-divider></v-divider>
-  
+
             <v-list-item
               v-for="item in items"
               :key="item.title"
@@ -33,7 +33,7 @@
               <v-list-item-icon>
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-item-icon>
-  
+
               <v-list-item-content>
                 <v-list-item-title>{{ item.title }}</v-list-item-title>
               </v-list-item-content>
@@ -44,16 +44,16 @@
           <v-spacer></v-spacer>
 
           <template v-slot:append >
-            <v-list-item 
+            <v-list-item
               link
               @click.stop="updateDrawer"
-            > 
+            >
               <v-list-item-icon>
                 <v-icon>mdi-menu-right</v-icon>
               </v-list-item-icon>
-              
+
               <v-list-item-content>
-                <v-list-item-title> Collapse 
+                <v-list-item-title> Collapse
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
@@ -63,6 +63,7 @@
     <!-- END NAVIGATION DRAWER -->
 
 </template>
+
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
@@ -91,9 +92,8 @@ export default {
 
     data () {
       return {
-        
-        // UI elements
 
+        // UI elements
 
         // List items
         items : [

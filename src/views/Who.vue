@@ -28,8 +28,8 @@
   <!-- ========================================  -->
   <!-- TEAM TAB -->
   <!-- ========================================  -->
-  
-  
+
+
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
 
@@ -52,7 +52,7 @@
             </div>
           </v-card>
         </v-col>
-        
+
         <v-col lg="8" align="start">
           <v-card flat tile :dark="darkMode" class="px-4">
           <v-card-subtitle>
@@ -76,7 +76,7 @@
             <span>Passionate about Web Technologies</span>
           </v-card-text>
 
-          <!-- <v-card-actions> 
+          <!-- <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn text>CV</v-btn>
           </v-card-actions> -->
@@ -99,7 +99,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   Analytics for Beginners
                   <v-spacer></v-spacer>
-                  <v-btn text 
+                  <v-btn text
                          class='font-weight-light'
                          link to='/certificate/beginner-analytics'
                          >
@@ -111,7 +111,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   Advanced Analytics
                   <v-spacer></v-spacer>
-                  <v-btn text 
+                  <v-btn text
                          class='font-weight-light'
                          link to='/certificate/advanced-analytics'
                          >
@@ -128,7 +128,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   Open Source Tools for Data Science
                   <v-spacer></v-spacer>
-                  <v-btn text 
+                  <v-btn text
                          class='font-weight-light'
                          link to="/certificate/open-source-tools-for-data-science"
                          >
@@ -140,7 +140,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   Data Science Methodology
                   <v-spacer></v-spacer>
-                  <v-btn text 
+                  <v-btn text
                          class='font-weight-light'
                          link to="/certificate/data-science-methodology"
                          >
@@ -152,7 +152,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   Python for Data Science and AI
                   <v-spacer></v-spacer>
-                  <v-btn text 
+                  <v-btn text
                          class='font-weight-light'
                          link to="/certificate/python-for-data-science"
                          >
@@ -169,7 +169,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   SQL Fundamentals
                   <v-spacer></v-spacer>
-                  <v-btn text 
+                  <v-btn text
                          class='font-weight-light'
                          link to="/certificate/sql-fundamentals"
                          >
@@ -181,7 +181,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   Data Cleaning and Analysis
                   <v-spacer></v-spacer>
-                  <v-btn text  
+                  <v-btn text
                          class='font-weight-light'
                          link to="/certificate/python-data-cleaning"
                          >
@@ -193,7 +193,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   Python Data Cleaning - Advanced
                   <v-spacer></v-spacer>
-                  <v-btn text 
+                  <v-btn text
                          class='font-weight-light'
                          link to='/certificate/python-data-cleaning-advanced'
                          >
@@ -205,7 +205,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   Exploratory Data Visualization
                   <v-spacer></v-spacer>
-                  <v-btn text 
+                  <v-btn text
                          class='font-weight-light'
                          link to="/certificate/exploratory-data-viz"
                          >
@@ -217,7 +217,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   Storytelling Data Visualization
                   <v-spacer></v-spacer>
-                  <v-btn text 
+                  <v-btn text
                          class='font-weight-light'
                          link to="/certificate/storytelling-data-viz"
                          >
@@ -229,7 +229,7 @@
                 <v-row class='mx-5 font-weight-light'>
                   Pandas and Numpy Fundamentals
                   <v-spacer></v-spacer>
-                  <v-btn text 
+                  <v-btn text
                          class='font-weight-light'
                          link to="/certificate/pandas-fundamentals"
                          >
@@ -256,7 +256,7 @@
         </v-card-subtitle>
         <v-divider class='mx-4'></v-divider>
         <v-container>
-        
+
           <v-row v-for="(skill, index) in skills" :key="index" align="center">
             <v-col cols="4" align="center">
               <v-icon>{{ skill.icon }}</v-icon>
@@ -277,20 +277,22 @@
         </v-container>
       </v-card>
     </v-col>
-  
+
   </v-row>
   </v-card>
-  
-  
+
+
   <!-- ========================================  -->
   <!-- CONTACT TAB -->
   <!-- ========================================  -->
   </v-tab-item>
-  
-    <v-card tile flat :color="appBgColor" class="pt-10">
+  <v-tab-item>
+
+    <v-card tile flat :dark="darkMode" :color="appBgColor" class="pt-10">
       <v-card-text large class="font-weight-medium text-center">palima.ae@protonmail.com</v-card-text>
     </v-card>
-  
+  </v-tab-item>
+
   </v-tabs-items>
 
 
@@ -309,7 +311,7 @@ export default {
 
     data () {
         return {
-          tabs: null, 
+          tabs: null,
 
           skills : [
             {name: "python", icon:"mdi-language-python", value: 100},
@@ -327,13 +329,13 @@ export default {
             {name: "api design", icon:"mdi-api", value:85},
 
 
-            
+
           ]
 
-        }        
+        }
     },
     // end DATA
-    
+
     computed: {
       ...mapGetters(['darkMode']),
     appBgColor () {return (this.darkMode ? "black" : "#F8F8FF")},
@@ -342,10 +344,10 @@ export default {
       var doc = document, w = window;
       var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
               doc.documentElement: doc.body;
-      
+
       var width = docEl.clientWidth;
       var height = docEl.clientHeight;
-      
+
       // mobile zoomed in?
       if ( w.innerWidth && width > w.innerWidth ) {
           width = w.innerWidth;

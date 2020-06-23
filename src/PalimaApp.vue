@@ -1,38 +1,14 @@
 <template>
-  <v-app 
+  <v-app
     :class="apptest"
     :style="appBgColor"
     >
 
-    <!-- <v-parallax
-      id="parallax-hero"
-      dark
-      src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-      jumbotron
-    >   -->
-
-    <!-- SYSTEM BAR -->
-    <!-- <v-system-bar
-        app 
-        id="systembar" 
-        :dark="darkMode"
-        window
-        fixed
-        >
-        <v-spacer></v-spacer>
-        <v-icon>mdi-wifi-strength-4</v-icon>
-        <v-icon>mdi-signal-cellular-outline</v-icon>
-        <v-icon>mdi-battery</v-icon>
-        <span>{{ currentTime }}</span>
-      </v-system-bar> -->
-
     <!-- NAVIGATION DRAWER -->
     <NavDrawer />
 
-
     <!-- APP BAR -->
     <NavBar />
-
 
     <!-- CONTENT (v-model should be in v-select)-->
     <MainContent />
@@ -67,10 +43,10 @@ export default {
       var doc = document, w = window;
       var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
               doc.documentElement: doc.body;
-      
+
       var width = docEl.clientWidth;
       var height = docEl.clientHeight;
-      
+
       // mobile zoomed in?
       if ( w.innerWidth && width > w.innerWidth ) {
           width = w.innerWidth;
@@ -79,7 +55,7 @@ export default {
       return {width: width, height: height};
     },
     apptest () {
-      
+
       var width = this.dw_getWindowDims.width;
       var id_value = (width<960 ? "mobileApp" : "desktopApp")
       console.log(id_value)
@@ -100,13 +76,6 @@ export default {
     Footer
   },
 
-  // data () {
-  //   return {
-
-
-  //   }
-  // },
-  // end DATA
 
   mounted() {
       document.getElementById('parallax-hero').style.height = '100%';
@@ -114,16 +83,16 @@ export default {
       // var doc = document, w = window;
       // var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
       //         doc.documentElement: doc.body;
-      
+
       // var width = docEl.clientWidth;
       // var height = docEl.clientHeight;
-      
+
       // mobile zoomed in?
       // if ( w.innerWidth && width > w.innerWidth ) {
       //     width = w.innerWidth;
           // height = w.innerHeight;
       // }
-      
+
       // var ismobile = width<960 ? true : false;
       // console.log(ismobile);
       // this.updateMobile(ismobile);
@@ -136,12 +105,12 @@ export default {
 
 <style lang="scss" scoped>
 
-.desktopApp { 
+.desktopApp {
   margin: auto;
   width: 80%
 }
 
-.mobileApp { 
+.mobileApp {
   margin: auto;
   width: 100%
 }

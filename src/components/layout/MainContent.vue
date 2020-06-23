@@ -7,8 +7,8 @@
 
           <!-- <v-row justify="space-around">
             <v-col cols="12"> -->
-              <!-- 
-                If using vue-router 
+              <!--
+                If using vue-router
                 router-view can take a key argument, we often need to set it to :
                 ':key = "$route.fullPath" to avoid bugs in single page applications
               -->
@@ -41,7 +41,7 @@ export default {
                 'teal',
                 'cyan'
             ],
-        }        
+        }
     },
     // end DATA
 

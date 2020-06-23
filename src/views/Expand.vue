@@ -17,11 +17,11 @@
 
 
   <v-tabs-items v-model="tabs">
-      
+
   <!-- ========================================  -->
   <!-- SEO & ADS TAB -->
   <!-- ========================================  -->
-  
+
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
   <v-row class="d-flex flex-row">
@@ -39,13 +39,13 @@
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
             <v-card-text :style="showSEOelem1" class="px-8">
-              <p>If you are looking for serious business growth, SEO is the 
+              <p>If you are looking for serious business growth, SEO is the
                 strategy for you.
                 <br>
                 It targets the users that are most likely to convert on your website, and takes them there.</p>
-              <p>A custom SEO campaign targets on-page and off-page SEO, and can include things like keyword research 
+              <p>A custom SEO campaign targets on-page and off-page SEO, and can include things like keyword research
                 and content implementation to your audience find you online.</p>
-              <p>We also analyze the results of your business’s SEO strategy to ensure that your campaign is 
+              <p>We also analyze the results of your business’s SEO strategy to ensure that your campaign is
                 performing at its best.</p>
             </v-card-text>
           </v-card>
@@ -61,12 +61,12 @@
               </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text :style="showSEOelem2" class="px-8"> 
-              <p>Local SEO services can ensure that your customers find you locally, and that you are always top of 
+            <v-card-text :style="showSEOelem2" class="px-8">
+              <p>Local SEO services can ensure that your customers find you locally, and that you are always top of
                 mind when customers are in your neighborhood.</p>
-              <p>When potential customers search businesses like yours in their area, you want to appear at 
+              <p>When potential customers search businesses like yours in their area, you want to appear at
                 the top of results.</p>
-              <p>Ultimately, local SEO helps achieve top rankings so more people can find and contact you — 
+              <p>Ultimately, local SEO helps achieve top rankings so more people can find and contact you —
                 and visit your local business.</p>
             </v-card-text>
           </v-card>
@@ -82,16 +82,16 @@
               </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text :style="showSEOelem4" class="px-8"> 
-              <p>We research high-volume, low-competition search queries on Amazon and incorporating them 
+            <v-card-text :style="showSEOelem4" class="px-8">
+              <p>We research high-volume, low-competition search queries on Amazon and incorporating them
                   into your product page to increase its ranking.
               </p>
-              <p>We prioritize user experience, which is why we create content that emphasizes 
-                  readability and quality, as well as your brand voice. It’s natural and connects with 
+              <p>We prioritize user experience, which is why we create content that emphasizes
+                  readability and quality, as well as your brand voice. It’s natural and connects with
                   shoppers, encouraging them to choose your company and product.
               </p>
-              <p>With pay-per-click (PPC) services on Amazon, we can also help your product gain immediate 
-                  exposure to complement your SEO strategy. Like traditional PPC ads, you only pay when a 
+              <p>With pay-per-click (PPC) services on Amazon, we can also help your product gain immediate
+                  exposure to complement your SEO strategy. Like traditional PPC ads, you only pay when a
                   shopper clicks on your listing.
               </p>
             </v-card-text>
@@ -108,9 +108,9 @@
               </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text :style="showSEOelem3" class="px-8"> 
-              <p>PPC, or pay-per-click advertising, is one of the best ways to target your 
-                most qualified audience. It allows you to reach them where they’re already looking, 
+            <v-card-text :style="showSEOelem3" class="px-8">
+              <p>PPC, or pay-per-click advertising, is one of the best ways to target your
+                most qualified audience. It allows you to reach them where they’re already looking,
                 and gain a leg up against competitors.</p>
               <p>We deliver custom PPC campaigns to help you increase both conversions and revenue for your company.</p>
             </v-card-text>
@@ -132,7 +132,7 @@
           <v-divider class="mx-4"></v-divider>
           <v-card-text :style="showSEOservices">
             <ul id="example-1">
-              <li v-for="(service, index) in seo_services" :key="index">  
+              <li v-for="(service, index) in seo_services" :key="index">
                 <span class="pl-2">{{ service }}</span>
               </li>
             </ul>
@@ -147,7 +147,7 @@
   <!-- ========================================  -->
   <!-- EMAIL CAMPAIGN TAB -->
   <!-- ========================================  -->
-  
+
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
   <v-row class="flex-row">
@@ -165,11 +165,11 @@
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
             <v-card-text :style="showEmailelem1" class="px-8">
-              <p>Email marketing is one of the best web marketing strategies for your business to increase brand awareness, 
+              <p>Email marketing is one of the best web marketing strategies for your business to increase brand awareness,
                 remind people of your business, and keep shoppers coming back for more.</p>
-              <p>To get the most out of your email marketing strategy, you have to build a strong campaign 
+              <p>To get the most out of your email marketing strategy, you have to build a strong campaign
                 that ensures your subscribers get the right information at the right time.</p>
-              <p>We offer many different email marketing management services to help your business succeed 
+              <p>We offer many different email marketing management services to help your business succeed
                 by placing you in your target audience's inbox.</p>
 
 
@@ -187,9 +187,9 @@
               </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text :style="showEmailelem2" class="px-8"> 
-              <p>Your customers' purchasing decisions can take weeks (or months!), 
-               so it's essential that you nurture your leads over time to turn them into paying customers. 
+            <v-card-text :style="showEmailelem2" class="px-8">
+              <p>Your customers' purchasing decisions can take weeks (or months!),
+               so it's essential that you nurture your leads over time to turn them into paying customers.
                Intelligent email is one of the most effective forms of lead nurturing on the market.</p>
               <p>With our marketing campaigns, you can:
                 <ul>
@@ -198,12 +198,12 @@
                   <li>Set up intelligent emails to trigger when users visit pages or submit forms.</li>
                 </ul>
               </p>
-              <p>Intelligent email marketing is one of the most effective channels for reaching customers because it allows 
-                you to directly communicate with those who have already expressed interest in your business. 
+              <p>Intelligent email marketing is one of the most effective channels for reaching customers because it allows
+                you to directly communicate with those who have already expressed interest in your business.
                 A message delivered to a lead’s inbox is a powerful tool — but only if it’s the right message.
               </p>
-              <p>We create campaigns that are tailored to individual leads. Instead of sending the same emails to 
-                all of your subscribers, you can send targeted and relevant messages that will keep both current 
+              <p>We create campaigns that are tailored to individual leads. Instead of sending the same emails to
+                all of your subscribers, you can send targeted and relevant messages that will keep both current
                 and potential customers engaged no matter where they are in the buying process.
               </p>
             </v-card-text>
@@ -220,23 +220,23 @@
               </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text :style="showEmailelem4" class="px-8"> 
-              <p>A proper ecommerce retargeting strategy minimizes abandoned carts and maximizes the 
+            <v-card-text :style="showEmailelem4" class="px-8">
+              <p>A proper ecommerce retargeting strategy minimizes abandoned carts and maximizes the
                   chances that your customers will make a purchase on your site.
               </p>
-              <p>Retargeting helps companies reach website visitors who don’t immediately convert. 
-                  In other words, retargeting can help your business connect with potential customers after 
+              <p>Retargeting helps companies reach website visitors who don’t immediately convert.
+                  In other words, retargeting can help your business connect with potential customers after
                   they leave your website and encourage them to return.
               </p>
-              <p>It requires using cookies to track user activities on the Internet. You can place small 
-                pieces of code on your website, and every time a visitor enters your site, the code will 
-                release an anonymous browser cookie. If someone enters their email address on your site and 
-                leaves before making a purchase, you can trigger a personalized email with the products they 
+              <p>It requires using cookies to track user activities on the Internet. You can place small
+                pieces of code on your website, and every time a visitor enters your site, the code will
+                release an anonymous browser cookie. If someone enters their email address on your site and
+                leaves before making a purchase, you can trigger a personalized email with the products they
                 viewed or placed in their cart.
               </p>
-              <p>Retargeting helps you get the most out of your advertising budget, because 
-                it allows you to focus your attention on people who have demonstrated interested in your 
-                brand. You can use clear calls to action and promotional offers to encourage them to come 
+              <p>Retargeting helps you get the most out of your advertising budget, because
+                it allows you to focus your attention on people who have demonstrated interested in your
+                brand. You can use clear calls to action and promotional offers to encourage them to come
                 back to your website and convert.
               </p>
             </v-card-text>
@@ -253,14 +253,14 @@
               </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text :style="showEmailelem3" class="px-8"> 
-              <p>As with any marketing strategy, it’s important to monitor how well your email strategy is 
-                performing so can make sure you're nurturing your leads well. With our reports, you can view sends, opens, and 
+            <v-card-text :style="showEmailelem3" class="px-8">
+              <p>As with any marketing strategy, it’s important to monitor how well your email strategy is
+                performing so can make sure you're nurturing your leads well. With our reports, you can view sends, opens, and
                 clicks right as they happen.
               </p>
-              <p>As your campaigns progress, you’ll begin to see patterns in customer behavior. 
-                This will not only show you how well your strategy is performing, but also help you identify areas 
-                that you can improve so you can nurture your leads better. You can edit existing emails and even add 
+              <p>As your campaigns progress, you’ll begin to see patterns in customer behavior.
+                This will not only show you how well your strategy is performing, but also help you identify areas
+                that you can improve so you can nurture your leads better. You can edit existing emails and even add
                 additional stages to your process to boost your email marketing success.
               </p>
             </v-card-text>
@@ -282,7 +282,7 @@
           <v-divider class="mx-4"></v-divider>
           <v-card-text :style="showEmailservices">
             <ul id="example-1">
-              <li v-for="(service, index) in email_services" :key="index">  
+              <li v-for="(service, index) in email_services" :key="index">
                 <span class="pl-2">{{ service }}</span>
               </li>
             </ul>
@@ -294,13 +294,13 @@
   </v-row>
   </v-card>
   </v-tab-item>
-  
-  
+
+
   <!-- ========================================  -->
   <!-- ANALYTICS TAB-->
   <!-- ========================================  -->
-  
-  
+
+
   <v-tab-item>
   <v-card flat tile height="100%" :color="appBgColor">
   <v-row class="flex-row">
@@ -318,12 +318,12 @@
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
             <v-card-text :style="showAnalelem1" class="px-8">
-              <p>Often, businesses do not know how to handle all their data because of the sheer volume. 
-                From user demographics to time on page, these are just two examples of the dozens of data 
+              <p>Often, businesses do not know how to handle all their data because of the sheer volume.
+                From user demographics to time on page, these are just two examples of the dozens of data
                 points you might encounter daily.
               </p>
               <p>You organize the data that you have access to with a customer data platform,
-                 and combine it with data from other platforms. This streamlined organization can help 
+                 and combine it with data from other platforms. This streamlined organization can help
                  you make the best decisions for your business.
               </p>
               <p>We can help you build pipelines to better collect customer data, store it and analyze it against
@@ -354,15 +354,15 @@
               </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text :style="showAnalelem2" class="px-8"> 
-              <p>Analyze your data. Identify trends and derive segmentation. We integrate marketplace data 
-                with your own data and explore correlations, create custom 
+            <v-card-text :style="showAnalelem2" class="px-8">
+              <p>Analyze your data. Identify trends and derive segmentation. We integrate marketplace data
+                with your own data and explore correlations, create custom
                 clusters, and do targeting on your custom clusters.
               </p>
-              <p>Gain competitive insights into who your customers are, where they live, 
+              <p>Gain competitive insights into who your customers are, where they live,
                 as well as their lifestyle, shopping patterns and media consumption.
               </p>
-              <p>Insights gathered from these profiles are often used to develop 
+              <p>Insights gathered from these profiles are often used to develop
                   new business development and retention strategies.
               </p>
             </v-card-text>
@@ -379,9 +379,9 @@
               </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text :style="showAnalelem3" class="px-8"> 
-              <p>Having your visitors perform a desired action once they land on your pages is the 
-                driving force behind increased revenue. We understand that maximizing client 
+            <v-card-text :style="showAnalelem3" class="px-8">
+              <p>Having your visitors perform a desired action once they land on your pages is the
+                driving force behind increased revenue. We understand that maximizing client
                 conversions is fundamental to your success, which is why our CRO services provide:
               </p>
               <ul>
@@ -403,17 +403,17 @@
               </v-icon>
             </v-card-title>
             <v-divider class="mx-4"></v-divider>
-            <v-card-text :style="showAnalelem4" class="px-8"> 
-              <p>Even if your site is extremely easy to navigate, your traffic quality may be too poor to 
+            <v-card-text :style="showAnalelem4" class="px-8">
+              <p>Even if your site is extremely easy to navigate, your traffic quality may be too poor to
                   encourage conversions.
               </p>
               <p>Conversion funnels are the paths through your site that visitors follow before converting.
               </p>
-              <p>Each page between an entrance page and a conversion page is an opportunity for your visitor 
-                  to become distracted and leave. If your conversion funnels are too intricate, potential 
+              <p>Each page between an entrance page and a conversion page is an opportunity for your visitor
+                  to become distracted and leave. If your conversion funnels are too intricate, potential
                   conversions will leave the path and that conversion will be lost.
               </p>
-              <p>Conversion funnel analysis ensures that qualified visitors stay on the right track to 
+              <p>Conversion funnel analysis ensures that qualified visitors stay on the right track to
                 conversions
               </p>
             </v-card-text>
@@ -435,7 +435,7 @@
           <v-divider class="mx-4"></v-divider>
           <v-card-text :style="showAnalservices">
             <ul id="example-1">
-              <li v-for="(service, index) in analytics_services" :key="index">  
+              <li v-for="(service, index) in analytics_services" :key="index">
                 <span class="pl-2">{{ service }}</span>
               </li>
             </ul>
@@ -464,15 +464,15 @@ export default {
   props: ["item","id"],
   data: () => {
     return {
-      tabs: null,  
+      tabs: null,
       cardHeight: 300,
       upIcon: "mdi-chevron-up",
       downIcon: "mdi-chevron-down",
 
       displaySEOelem1: false,
       displaySEOelem2: false,
-      displaySEOelem3: false, 
-      displaySEOelem4: false, 
+      displaySEOelem3: false,
+      displaySEOelem4: false,
       displaySEOservices: true,
 
       displayEmailelem1: false,
@@ -488,50 +488,50 @@ export default {
       displayAnalservices: true,
 
       seo_services : [
-        "Web server analysis & reporting", 
-        "Keyphrase research & selection", 
-        "Predictive keyword analysis", 
-        "Meta tags (Title & description)", 
-        "Optimization of robots.txt & GoogleBot crawls", 
-        "Creation & registrations of sitemap.xml", 
-        "Video and image XML sitemaps", 
-        "Google My Business optimization (if needed)", 
-        "Mobile site optimization (if applicable)", 
-        "Information architecture audit", 
-        "Google Analytics setup w/ conversion tracking", 
-        "Google Analytics traffic analysis", 
-        "Custom Dashboards/Data Views", 
-        "Local search optimization", 
-        "Image optimization", 
-        "Link redirect audit", 
-        "Schema HTML tags", 
+        "Web server analysis & reporting",
+        "Keyphrase research & selection",
+        "Predictive keyword analysis",
+        "Meta tags (Title & description)",
+        "Optimization of robots.txt & GoogleBot crawls",
+        "Creation & registrations of sitemap.xml",
+        "Video and image XML sitemaps",
+        "Google My Business optimization (if needed)",
+        "Mobile site optimization (if applicable)",
+        "Information architecture audit",
+        "Google Analytics setup w/ conversion tracking",
+        "Google Analytics traffic analysis",
+        "Custom Dashboards/Data Views",
+        "Local search optimization",
+        "Image optimization",
+        "Link redirect audit",
+        "Schema HTML tags",
         "Canonicalization analysis & domain unification",
-        "Google data highlights", 
-        "Internal linking restructuring & optimization", 
-        "Linkable content promotion", 
-        "Duplicate content analysis", 
-        "Website usability analysis", 
-        "Searcher experience analysis long-clicks, pogo-sticking, bounce rate, etc.)", 
-        "Monitor competitors' search rankings on a monthly basis", 
+        "Google data highlights",
+        "Internal linking restructuring & optimization",
+        "Linkable content promotion",
+        "Duplicate content analysis",
+        "Website usability analysis",
+        "Searcher experience analysis long-clicks, pogo-sticking, bounce rate, etc.)",
+        "Monitor competitors' search rankings on a monthly basis",
         "Monitor competitors' content and link additions on a monthly basis"
       ],
 
       email_services: [
-        "Campaign and target strategy", 
-        "Lead nurture workflow development", 
-        "Creative theme development", 
-        "Coding of lifecycle emails", 
-        "Testing of emails on 24 clients", 
+        "Campaign and target strategy",
+        "Lead nurture workflow development",
+        "Creative theme development",
+        "Coding of lifecycle emails",
+        "Testing of emails on 24 clients",
         "CAN-SPAM Act checkup",
-        "Lifecycle email strategic distribution schedule", 
-        "Custom segmented lists", 
-        "Web form signup implementation", 
-        "Web form signup tagging coding", 
+        "Lifecycle email strategic distribution schedule",
+        "Custom segmented lists",
+        "Web form signup implementation",
+        "Web form signup tagging coding",
         "Manual form subscription to lifecycle email campaign",
-        "Built-in unsubscribe functionality", 
-        "Reports for open rate per lifecycle campaign stage", 
-        "Reports for individual subscribers", 
-        "Clickthrough rate reports per drip stage", 
+        "Built-in unsubscribe functionality",
+        "Reports for open rate per lifecycle campaign stage",
+        "Reports for individual subscribers",
+        "Clickthrough rate reports per drip stage",
         "Complete visitor/lead lifecycle \t\n view (website visits, pages viewed, emails viewed, emails opened, etc.)",
         "Triggered emails based on web visitor behavior"
       ],
@@ -539,24 +539,24 @@ export default {
       analytics_services: [
         "Audit of current server configuration",
         "Setup and/or configuration of a CDN",
-        "Caching setup and/or configuration", 
-        "Setup of browser caching", 
+        "Caching setup and/or configuration",
+        "Setup of browser caching",
         "Minify JavaScript",
-        "Conversion tracking code setup", 
-        "Goal Funnels Setup - Initial Analytics + Reporting", 
-        "Initial Conversion Audit - What Portions of Site to Test/Optimize for Conversions + Optimization Suggestions", 
-        "Use of Google Optimize for A/B testing (Client Google Analytics access is required)", 
-        "Initial heatmap and click stream testing and analysis", 
-        "ROI & split test reporting schedule", 
-        "Conversion strategy", 
-        "Conversion best practices documentation", 
-        "Static calls to action design", 
-        "Navigational modifications", 
-        "Multivariate conversion testing", 
-        "Setup of auto responders", 
-        "Incoming traffic reporting and recommendations", 
-        "Incoming traffic analysis", 
-        "Conversion path implementation", 
+        "Conversion tracking code setup",
+        "Goal Funnels Setup - Initial Analytics + Reporting",
+        "Initial Conversion Audit - What Portions of Site to Test/Optimize for Conversions + Optimization Suggestions",
+        "Use of Google Optimize for A/B testing (Client Google Analytics access is required)",
+        "Initial heatmap and click stream testing and analysis",
+        "ROI & split test reporting schedule",
+        "Conversion strategy",
+        "Conversion best practices documentation",
+        "Static calls to action design",
+        "Navigational modifications",
+        "Multivariate conversion testing",
+        "Setup of auto responders",
+        "Incoming traffic reporting and recommendations",
+        "Incoming traffic analysis",
+        "Conversion path implementation",
         "Shopping cart abandonment testing"
 
 
@@ -634,10 +634,10 @@ export default {
       var doc = document, w = window;
       var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
               doc.documentElement: doc.body;
-      
+
       var width = docEl.clientWidth;
       var height = docEl.clientHeight;
-      
+
       // mobile zoomed in?
       if ( w.innerWidth && width > w.innerWidth ) {
           width = w.innerWidth;
@@ -645,7 +645,7 @@ export default {
       }
       return {width: width, height: height};
     },
-    
+
 
   },
 
@@ -656,7 +656,7 @@ export default {
       if(this.item.open) {
         document.body.style.top = '-' + window.scrollY + 'px';
         document.body.style.position = 'fixed';
-        this.styleObject.transform = 
+        this.styleObject.transform =
           'translate('+ viewportOffset.left * -1 +'px, '+ viewportOffset.top * -1 +'px)';
       }
       else {

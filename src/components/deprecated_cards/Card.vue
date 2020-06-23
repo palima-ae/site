@@ -4,7 +4,7 @@
       :class="{'open': item.open}"
       :style="styleObject">
       <div class="card-top">
-        <div class="img" 
+        <div class="img"
         :style="{'background-image': 'url('+ require('@/assets'+ item.img)+')'}"></div>
         <div class="title">{{ item.title }}</div>
       </div>
@@ -35,7 +35,7 @@ export default {
       if(this.item.open) {
         document.body.style.top = '-' + window.scrollY + 'px';
         document.body.style.position = 'fixed';
-        this.styleObject.transform = 
+        this.styleObject.transform =
           'translate('+ viewportOffset.left * -1 +'px, '+ viewportOffset.top * -1 +'px)';
         if(cardId !== this.id)
           this.$router.push({ name: 'card', params: {id: cardId}});
