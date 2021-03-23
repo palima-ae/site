@@ -289,7 +289,7 @@
   <v-tab-item>
 
     <v-card tile flat :dark="darkMode" :color="appBgColor" class="pt-10">
-      <v-card-text large class="font-weight-medium text-center">palima.ae@protonmail.com</v-card-text>
+      <v-card-text large class="font-weight-medium text-center">contact@palima-ae.com</v-card-text>
     </v-card>
   </v-tab-item>
 
